@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Consumer
+Bundle-SymbolicName: com.food.desert.consumer
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.food.desert.consumer.Activator
+Bundle-Vendor: FOOD
+Bundle-RequiredExecutionEnvironment: JavaSE-21
+Automatic-Module-Name: com.food.desert.consumer
+Import-Package: com.food.desert.producer,
+ org.osgi.framework;version="1.3.0"
