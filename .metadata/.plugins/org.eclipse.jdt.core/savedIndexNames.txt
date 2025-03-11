@@ -1,11 +1,6 @@
 INDEX VERSION 1.134+D:\Y3S2\SA\Osgi assgnment\.metadata\.plugins\org.eclipse.jdt.core
-3353253774.index
-3323917170.index
-397830004.index
-1559915577.index
-2308656405.index
 1886250958.index
+3368475280.index
 2538772789.index
-902693681.index
-3021668840.index
 1865797976.index
+804889707.index

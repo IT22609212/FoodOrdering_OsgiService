@@ -1,6 +1,6 @@
 package com.food.consumer;
 
-import org.osgi.framework.BundleActivator;
+import org.osgi.framework.BundleActivator; 
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceReference;
 
