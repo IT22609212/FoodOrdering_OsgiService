@@ -5,6 +5,7 @@ import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceReference;
 import com.food.desert.producer.DessertShopService;
 import java.util.List;
+import java.util.Scanner;
 
 public class DessertShopConsumer implements BundleActivator {
     private ServiceReference<DessertShopService> serviceReference;
@@ -17,12 +18,18 @@ public class DessertShopConsumer implements BundleActivator {
             if (dessertService != null) {
                 List<String> desserts = dessertService.getDesserts();
                 System.out.println("Available Desserts: " + desserts);
-                
-                // Add a new flavor
-                dessertService.addFlavor("Mango Sorbet");
 
-                // Remove a flavor
-                dessertService.removeFlavor("Vanilla Ice Cream");
+                Scanner scanner = new Scanner(System.in);
+
+                // Ask user to add a new flavor
+                System.out.print("Enter a new flavor to add: ");
+                String newFlavor = scanner.nextLine();
+                dessertService.addFlavor(newFlavor);
+
+                // Ask user to remove a flavor
+                System.out.print("Enter a flavor to remove: ");
+                String removeFlavor = scanner.nextLine();
+                dessertService.removeFlavor(removeFlavor);
 
                 // Display updated menu
                 System.out.println("Updated Desserts: " + dessertService.getDesserts());
@@ -33,7 +40,6 @@ public class DessertShopConsumer implements BundleActivator {
             System.out.println("Service Reference not found.");
         }
     }
-
 
     @Override
     public void stop(BundleContext context) throws Exception {
