@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Producer
+Bundle-SymbolicName: com.food.producer
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.food.producer.Activator
+Bundle-Vendor: FOOD
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Automatic-Module-Name: com.food.producer
+Export-Package: com.food.producer
+Import-Package: org.osgi.framework;version="1.3.0"

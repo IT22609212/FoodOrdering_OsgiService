@@ -1,0 +1,2353 @@
+!SESSION 2025-03-11 19:07:25.407 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.8
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -dev file:D:/Y3S2/SA/Osgi assgnment/.metadata/.plugins/org.eclipse.pde.core/food_producer/dev.properties -os win32 -ws win32 -arch x86_64 -consoleLog -console
+
+This is a continuation of log file D:\Y3S2\SA\Osgi assgnment\.metadata\.plugins\org.eclipse.pde.core\food_producer\1741700245578.bak_0.log
+Created Time: 2025-03-11 19:07:58.747
+
+!ENTRY org.eclipse.xtext.ui.ecore 4 0 2025-03-11 19:07:58.751
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Exception in org.eclipse.xtext.ui.ecore.Activator.start() of bundle org.eclipse.xtext.ui.ecore.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:839)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:767)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:605)
+	at org.eclipse.osgi.container.Module.start(Module.java:468)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1852)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1845)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1788)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1750)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1672)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/ui/shared/SharedStateModule
+	at org.eclipse.xtext.ui.ecore.Activator.initializeEcoreInjector(Activator.java:50)
+	at org.eclipse.xtext.ui.ecore.Activator.start(Activator.java:58)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	... 14 more
+Caused by: java.lang.ClassNotFoundException: An error occurred while automatically activating bundle org.eclipse.xtext.ui.shared (1081).
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:126)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:570)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:335)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:397)
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass0(BundleLoader.java:496)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:416)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	... 20 more
+Caused by: org.osgi.framework.BundleException: Exception in org.eclipse.xtext.ui.shared.internal.Activator.start() of bundle org.eclipse.xtext.ui.shared.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:839)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:767)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:605)
+	at org.eclipse.osgi.container.Module.start(Module.java:468)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:513)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	... 28 more
+Caused by: org.eclipse.core.runtime.CoreException: Xtext configuration error!
+This error might indicate missing version constraints of installed Xtext based bundles.
+The following bundles were detected that require Xtext UI:
+- org.eclipse.emf.mwe2.language.ui 2.14.0.v20221117-1134 [ACTIVE]
+The installed Xtext bundle versions are:
+- org.eclipse.xtext 2.31.0.v20230529-0659 [ACTIVE]
+- org.eclipse.xtext.ide 2.31.0.v20230529-0659 [ACTIVE]
+- org.eclipse.xtext.ui 2.31.0.v20230529-0659 [ACTIVE]
+- org.eclipse.xtext.ui.shared 2.31.0.v20230529-0659 [STARTING]
+
+	at org.eclipse.xtext.ui.shared.internal.Activator.handleGuiceInitializationError(Activator.java:141)
+	at org.eclipse.xtext.ui.shared.internal.Activator.initializeInjector(Activator.java:108)
+	at org.eclipse.xtext.ui.shared.internal.Activator.start(Activator.java:221)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	... 35 more
+Caused by: com.google.inject.CreationException: Unable to create injector, see the following errors:
+
+1) [Guice/ErrorInjectingMethod]: NoClassDefFoundError: org/eclipse/jdt/core/IElementChangedListener
+  at XtextResourceSetProvider.setContributions(XtextResourceSetProvider.java:32)
+  at XtextResourceSetProvider.class(XtextResourceSetProvider.java:32)
+  while locating XtextResourceSetProvider
+  at ResourceLoaderProviders$AbstractResourceLoaderProvider.resourceSetProvider(ResourceLoaderProviders.java:29)
+      \_ for field resourceSetProvider
+  at SharedModule.configure(SharedModule.java:174)
+
+Learn more:
+  https://github.com/google/guice/wiki/ERROR_INJECTING_METHOD
+Caused by: NoClassDefFoundError: org/eclipse/jdt/core/IElementChangedListener
+	at java.base/ClassLoader.defineClass1(Native Method)
+	at java.base/ClassLoader.defineClass(ClassLoader.java:1017)
+	at ModuleClassLoader.defineClass(ModuleClassLoader.java:283)
+	at ClasspathManager.defineClass(ClasspathManager.java:716)
+	at ClasspathManager.findClassImpl(ClasspathManager.java:639)
+	at ClasspathManager.findLocalClassImpl(ClasspathManager.java:607)
+	at ClasspathManager.findLocalClassImpl(ClasspathManager.java:587)
+	at ClasspathManager.findLocalClass(ClasspathManager.java:566)
+	at ModuleClassLoader.findLocalClass(ModuleClassLoader.java:335)
+	at BundleLoader.findLocalClass(BundleLoader.java:397)
+	at SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at BundleLoader.findClass0(BundleLoader.java:496)
+	at BundleLoader.findClass(BundleLoader.java:416)
+	at ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/ClassLoader.loadClass(ClassLoader.java:525)
+	at CommonTypesContribution.configure(CommonTypesContribution.java:42)
+	at Elements$RecordingBinder.install(Elements.java:426)
+	at SharedStateContributionRegistryImpl$2.configure(SharedStateContributionRegistryImpl.java:157)
+	at Elements$RecordingBinder.install(Elements.java:426)
+	at Elements.getElements(Elements.java:113)
+	at InjectorShell$Builder.build(InjectorShell.java:160)
+	at InternalInjectorCreator.build(InternalInjectorCreator.java:107)
+	at InjectorImpl.createChildInjector(InjectorImpl.java:240)
+	at InjectorImpl.createChildInjector(InjectorImpl.java:245)
+	at SharedStateContributionRegistryImpl.createInjectorWithoutJITBindings(SharedStateContributionRegistryImpl.java:62)
+	at SharedStateContributionRegistryImpl.createContribution(SharedStateContributionRegistryImpl.java:147)
+	at SharedStateContributionRegistryImpl.initializeContributions(SharedStateContributionRegistryImpl.java:129)
+	at SharedStateContributionRegistryImpl.getContributions(SharedStateContributionRegistryImpl.java:69)
+	at SharedStateContributionRegistryImpl.getContributedInstances(SharedStateContributionRegistryImpl.java:77)
+	at XtextResourceSetProvider.setContributions(XtextResourceSetProvider.java:44)
+	at java.base/NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/Method.invoke(Method.java:568)
+	at SingleMethodInjector$2.invoke(SingleMethodInjector.java:72)
+	at SingleMethodInjector.inject(SingleMethodInjector.java:87)
+	at MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:146)
+	at ConstructorInjector.provision(ConstructorInjector.java:124)
+	at ConstructorInjector.construct(ConstructorInjector.java:91)
+	at ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:300)
+	at ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+	at SingletonScope$1.get(SingletonScope.java:169)
+	at InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:45)
+	at FactoryProxy.get(FactoryProxy.java:60)
+	at ExposedKeyFactory.get(ExposedKeyFactory.java:57)
+	at SingleFieldInjector.inject(SingleFieldInjector.java:50)
+	at MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:146)
+	at MembersInjectorImpl.injectAndNotify(MembersInjectorImpl.java:101)
+	at Initializer$InjectableReference.get(Initializer.java:256)
+	at Initializer.injectAll(Initializer.java:153)
+	at InternalInjectorCreator.injectDynamically(InternalInjectorCreator.java:180)
+	at InternalInjectorCreator.build(InternalInjectorCreator.java:113)
+	at Guice.createInjector(Guice.java:87)
+	at Guice.createInjector(Guice.java:69)
+	at Guice.createInjector(Guice.java:59)
+	at internal.Activator.initializeInjector(Activator.java:100)
+	at internal.Activator.start(Activator.java:221)
+	at BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/AccessController.doPrivileged(AccessController.java:569)
+	at BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	at BundleContextImpl.start(BundleContextImpl.java:767)
+	at EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at Module.doStart(Module.java:605)
+	at Module.start(Module.java:468)
+	at SecureAction.start(SecureAction.java:513)
+	at EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	at ClasspathManager.findLocalClass(ClasspathManager.java:570)
+	at ModuleClassLoader.findLocalClass(ModuleClassLoader.java:335)
+	at BundleLoader.findLocalClass(BundleLoader.java:397)
+	at SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at BundleLoader.findClass0(BundleLoader.java:496)
+	at BundleLoader.findClass(BundleLoader.java:416)
+	at ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/ClassLoader.loadClass(ClassLoader.java:525)
+	at ecore.Activator.initializeEcoreInjector(Activator.java:50)
+	at ecore.Activator.start(Activator.java:58)
+	at BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/AccessController.doPrivileged(AccessController.java:569)
+	at BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	at BundleContextImpl.start(BundleContextImpl.java:767)
+	at EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at Module.doStart(Module.java:605)
+	at Module.start(Module.java:468)
+	at ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1852)
+	at EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1845)
+	at ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1788)
+	at ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1750)
+	at ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1672)
+	at ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at EventManager.dispatchEvent(EventManager.java:234)
+	at EventManager$EventThread.run(EventManager.java:345)
+Caused by: ClassNotFoundException: An error occurred while automatically activating bundle org.eclipse.jdt.core (453).
+	at EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:126)
+	at ClasspathManager.findLocalClass(ClasspathManager.java:570)
+	at ModuleClassLoader.findLocalClass(ModuleClassLoader.java:335)
+	at BundleLoader.findLocalClass(BundleLoader.java:397)
+	at SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at BundleLoader.findClass0(BundleLoader.java:496)
+	at BundleLoader.findClass(BundleLoader.java:416)
+	at ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/ClassLoader.loadClass(ClassLoader.java:525)
+	at AptPlugin.start(AptPlugin.java:111)
+	... 18 more
+Caused by: BundleException: Exception in JavaCore.start() of bundle org.eclipse.jdt.core.
+	at BundleContextImpl.startActivator(BundleContextImpl.java:839)
+	at BundleContextImpl.start(BundleContextImpl.java:767)
+	at EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at Module.doStart(Module.java:605)
+	at Module.start(Module.java:468)
+	at SecureAction.start(SecureAction.java:513)
+	at EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	... 27 more
+Caused by: ExceptionInInitializerError
+	at JavaCore.start(JavaCore.java:6477)
+	at BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/AccessController.doPrivileged(AccessController.java:569)
+	at BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	... 34 more
+Caused by: IllegalStateException: Workspace is already closed or not ready yet. Consider tracking the IWorkspace service (using your favorite technique, e.g. Declarative Services, ServiceTracker, Blueprint, ...) instead of calling the static method here to prevent such issues!
+	at ResourcesPlugin.getWorkspace(ResourcesPlugin.java:502)
+	at WorkspaceJob.<init>(WorkspaceJob.java:68)
+	at ExternalFoldersManager$1InitializeFolders.<init>(ExternalFoldersManager.java:84)
+	at ExternalFoldersManager.<init>(ExternalFoldersManager.java:98)
+	at ExternalFoldersManager.getExternalFoldersManager(ExternalFoldersManager.java:107)
+	at JavaModelManager.<init>(JavaModelManager.java:596)
+	at JavaModelManager.<clinit>(JavaModelManager.java:1207)
+	... 39 more
+
+2) [Guice/ErrorInjectingMethod]: NoClassDefFoundError: org/eclipse/jdt/core/IElementChangedListener
+  at XtextResourceSetProvider.setContributions(XtextResourceSetProvider.java:32)
+  at XtextResourceSetProvider.class(XtextResourceSetProvider.java:32)
+  while locating XtextResourceSetProvider
+  at ResourceLoaderProviders$AbstractResourceLoaderProvider.resourceSetProvider(ResourceLoaderProviders.java:29)
+      \_ for field resourceSetProvider
+  at SharedModule.configure(SharedModule.java:176)
+
+Learn more:
+  https://github.com/google/guice/wiki/ERROR_INJECTING_METHOD
+Caused by: NoClassDefFoundError: org/eclipse/jdt/core/IElementChangedListener
+	at CommonTypesContribution.configure(CommonTypesContribution.java:42)
+	at Elements$RecordingBinder.install(Elements.java:426)
+	at SharedStateContributionRegistryImpl$2.configure(SharedStateContributionRegistryImpl.java:157)
+	at Elements$RecordingBinder.install(Elements.java:426)
+	at Elements.getElements(Elements.java:113)
+	at InjectorShell$Builder.build(InjectorShell.java:160)
+	at InternalInjectorCreator.build(InternalInjectorCreator.java:107)
+	at InjectorImpl.createChildInjector(InjectorImpl.java:240)
+	at InjectorImpl.createChildInjector(InjectorImpl.java:245)
+	at SharedStateContributionRegistryImpl.createInjectorWithoutJITBindings(SharedStateContributionRegistryImpl.java:62)
+	at SharedStateContributionRegistryImpl.createContribution(SharedStateContributionRegistryImpl.java:147)
+	at SharedStateContributionRegistryImpl.initializeContributions(SharedStateContributionRegistryImpl.java:129)
+	at SharedStateContributionRegistryImpl.getContributions(SharedStateContributionRegistryImpl.java:69)
+	at SharedStateContributionRegistryImpl.getContributedInstances(SharedStateContributionRegistryImpl.java:77)
+	at XtextResourceSetProvider.setContributions(XtextResourceSetProvider.java:44)
+	at java.base/NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/Method.invoke(Method.java:568)
+	at SingleMethodInjector$2.invoke(SingleMethodInjector.java:72)
+	at SingleMethodInjector.inject(SingleMethodInjector.java:87)
+	at MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:146)
+	at ConstructorInjector.provision(ConstructorInjector.java:124)
+	at ConstructorInjector.construct(ConstructorInjector.java:91)
+	at ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:300)
+	at ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+	at SingletonScope$1.get(SingletonScope.java:169)
+	at InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:45)
+	at FactoryProxy.get(FactoryProxy.java:60)
+	at ExposedKeyFactory.get(ExposedKeyFactory.java:57)
+	at SingleFieldInjector.inject(SingleFieldInjector.java:50)
+	at MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:146)
+	at MembersInjectorImpl.injectAndNotify(MembersInjectorImpl.java:101)
+	at Initializer$InjectableReference.get(Initializer.java:256)
+	at Initializer.injectAll(Initializer.java:153)
+	at InternalInjectorCreator.injectDynamically(InternalInjectorCreator.java:180)
+	at InternalInjectorCreator.build(InternalInjectorCreator.java:113)
+	at Guice.createInjector(Guice.java:87)
+	at Guice.createInjector(Guice.java:69)
+	at Guice.createInjector(Guice.java:59)
+	at internal.Activator.initializeInjector(Activator.java:100)
+	at internal.Activator.start(Activator.java:221)
+	at BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/AccessController.doPrivileged(AccessController.java:569)
+	at BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	at BundleContextImpl.start(BundleContextImpl.java:767)
+	at EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at Module.doStart(Module.java:605)
+	at Module.start(Module.java:468)
+	at SecureAction.start(SecureAction.java:513)
+	at EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	at ClasspathManager.findLocalClass(ClasspathManager.java:570)
+	at ModuleClassLoader.findLocalClass(ModuleClassLoader.java:335)
+	at BundleLoader.findLocalClass(BundleLoader.java:397)
+	at SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at BundleLoader.findClass0(BundleLoader.java:496)
+	at BundleLoader.findClass(BundleLoader.java:416)
+	at ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/ClassLoader.loadClass(ClassLoader.java:525)
+	at ecore.Activator.initializeEcoreInjector(Activator.java:50)
+	at ecore.Activator.start(Activator.java:58)
+	at BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/AccessController.doPrivileged(AccessController.java:569)
+	at BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	at BundleContextImpl.start(BundleContextImpl.java:767)
+	at EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at Module.doStart(Module.java:605)
+	at Module.start(Module.java:468)
+	at ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1852)
+	at EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1845)
+	at ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1788)
+	at ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1750)
+	at ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1672)
+	at ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at EventManager.dispatchEvent(EventManager.java:234)
+	at EventManager$EventThread.run(EventManager.java:345)
+Caused by: ClassNotFoundException: An error occurred while automatically activating bundle org.eclipse.jdt.core (453).
+	... 81 more
+
+3) [Guice/ErrorInjectingMethod]: NoClassDefFoundError: org/eclipse/jdt/core/IElementChangedListener
+  at XtextResourceSetProvider.setContributions(XtextResourceSetProvider.java:32)
+  at XtextResourceSetProvider.class(XtextResourceSetProvider.java:32)
+  while locating XtextResourceSetProvider
+  at ResourceLoaderProviders$AbstractResourceLoaderProvider.resourceSetProvider(ResourceLoaderProviders.java:29)
+      \_ for field resourceSetProvider
+  at SharedModule.configure(SharedModule.java:180)
+
+Learn more:
+  https://github.com/google/guice/wiki/ERROR_INJECTING_METHOD
+Caused by: NoClassDefFoundError (same stack trace as error #2)
+3 errors
+
+======================
+Full classname legend:
+======================
+AccessController:                                       "java.security.AccessController"
+AptPlugin:                                              "org.eclipse.jdt.apt.core.internal.AptPlugin"
+BundleContextImpl:                                      "org.eclipse.osgi.internal.framework.BundleContextImpl"
+BundleContextImpl$2:                                    "org.eclipse.osgi.internal.framework.BundleContextImpl$2"
+BundleException:                                        "org.osgi.framework.BundleException"
+BundleLoader:                                           "org.eclipse.osgi.internal.loader.BundleLoader"
+ClasspathManager:                                       "org.eclipse.osgi.internal.loader.classpath.ClasspathManager"
+CommonTypesContribution:                                "org.eclipse.xtext.common.types.shared.CommonTypesContribution"
+ConstructorBindingImpl$Factory:                         "com.google.inject.internal.ConstructorBindingImpl$Factory"
+ConstructorInjector:                                    "com.google.inject.internal.ConstructorInjector"
+DelegatingMethodAccessorImpl:                           "jdk.internal.reflect.DelegatingMethodAccessorImpl"
+EclipseLazyStarter:                                     "org.eclipse.osgi.internal.hooks.EclipseLazyStarter"
+Elements:                                               "com.google.inject.spi.Elements"
+Elements$RecordingBinder:                               "com.google.inject.spi.Elements$RecordingBinder"
+EquinoxBundle:                                          "org.eclipse.osgi.internal.framework.EquinoxBundle"
+EquinoxBundle$EquinoxModule:                            "org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule"
+EquinoxContainerAdaptor$1$1:                            "org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1"
+EventManager:                                           "org.eclipse.osgi.framework.eventmgr.EventManager"
+EventManager$EventThread:                               "org.eclipse.osgi.framework.eventmgr.EventManager$EventThread"
+ExposedKeyFactory:                                      "com.google.inject.internal.ExposedKeyFactory"
+ExternalFoldersManager:                                 "org.eclipse.jdt.internal.core.ExternalFoldersManager"
+ExternalFoldersManager$1InitializeFolders:              "org.eclipse.jdt.internal.core.ExternalFoldersManager$1InitializeFolders"
+FactoryProxy:                                           "com.google.inject.internal.FactoryProxy"
+Guice:                                                  "com.google.inject.Guice"
+IWorkspace:                                             "org.eclipse.core.resources.IWorkspace"
+Initializer:                                            "com.google.inject.internal.Initializer"
+Initializer$InjectableReference:                        "com.google.inject.internal.Initializer$InjectableReference"
+InjectorImpl:                                           "com.google.inject.internal.InjectorImpl"
+InjectorShell$Builder:                                  "com.google.inject.internal.InjectorShell$Builder"
+InternalFactoryToProviderAdapter:                       "com.google.inject.internal.InternalFactoryToProviderAdapter"
+InternalInjectorCreator:                                "com.google.inject.internal.InternalInjectorCreator"
+JavaCore:                                               "org.eclipse.jdt.core.JavaCore"
+JavaModelManager:                                       "org.eclipse.jdt.internal.core.JavaModelManager"
+MembersInjectorImpl:                                    "com.google.inject.internal.MembersInjectorImpl"
+Method:                                                 "java.lang.reflect.Method"
+Module:                                                 "org.eclipse.osgi.container.Module"
+ModuleClassLoader:                                      "org.eclipse.osgi.internal.loader.ModuleClassLoader"
+ModuleContainer$ContainerStartLevel:                    "org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel"
+ModuleContainer$ContainerStartLevel$2:                  "org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2"
+NativeMethodAccessorImpl:                               "jdk.internal.reflect.NativeMethodAccessorImpl"
+ProviderToInternalFactoryAdapter:                       "com.google.inject.internal.ProviderToInternalFactoryAdapter"
+ResourceLoaderProviders$AbstractResourceLoaderProvider: "org.eclipse.xtext.builder.resourceloader.ResourceLoaderProviders$AbstractResourceLoaderProvider"
+ResourcesPlugin:                                        "org.eclipse.core.resources.ResourcesPlugin"
+SecureAction:                                           "org.eclipse.osgi.framework.util.SecureAction"
+SharedModule:                                           "org.eclipse.xtext.ui.shared.internal.SharedModule"
+SharedStateContributionRegistryImpl:                    "org.eclipse.xtext.ui.shared.internal.SharedStateContributionRegistryImpl"
+SharedStateContributionRegistryImpl$2:                  "org.eclipse.xtext.ui.shared.internal.SharedStateContributionRegistryImpl$2"
+SingleFieldInjector:                                    "com.google.inject.internal.SingleFieldInjector"
+SingleMethodInjector:                                   "com.google.inject.internal.SingleMethodInjector"
+SingleMethodInjector$2:                                 "com.google.inject.internal.SingleMethodInjector$2"
+SingleSourcePackage:                                    "org.eclipse.osgi.internal.loader.sources.SingleSourcePackage"
+SingletonScope$1:                                       "com.google.inject.internal.SingletonScope$1"
+WorkspaceJob:                                           "org.eclipse.core.resources.WorkspaceJob"
+XtextResourceSetProvider:                               "org.eclipse.xtext.ui.resource.XtextResourceSetProvider"
+ecore.Activator:                                        "org.eclipse.xtext.ui.ecore.Activator"
+internal.Activator:                                     "org.eclipse.xtext.ui.shared.internal.Activator"
+========================
+End of classname legend:
+========================
+
+	at com.google.inject.internal.Errors.throwCreationExceptionIfErrorsExist(Errors.java:589)
+	at com.google.inject.internal.InternalInjectorCreator.injectDynamically(InternalInjectorCreator.java:182)
+	at com.google.inject.internal.InternalInjectorCreator.build(InternalInjectorCreator.java:113)
+	at com.google.inject.Guice.createInjector(Guice.java:87)
+	at com.google.inject.Guice.createInjector(Guice.java:69)
+	at com.google.inject.Guice.createInjector(Guice.java:59)
+	at org.eclipse.xtext.ui.shared.internal.Activator.initializeInjector(Activator.java:100)
+	... 40 more
+Root exception:
+java.lang.NoClassDefFoundError: org/eclipse/xtext/ui/shared/SharedStateModule
+	at org.eclipse.xtext.ui.ecore.Activator.initializeEcoreInjector(Activator.java:50)
+	at org.eclipse.xtext.ui.ecore.Activator.start(Activator.java:58)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:767)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:605)
+	at org.eclipse.osgi.container.Module.start(Module.java:468)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1852)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1845)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1788)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1750)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1672)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+Caused by: java.lang.ClassNotFoundException: An error occurred while automatically activating bundle org.eclipse.xtext.ui.shared (1081).
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:126)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:570)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:335)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:397)
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass0(BundleLoader.java:496)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:416)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	... 20 more
+Caused by: org.osgi.framework.BundleException: Exception in org.eclipse.xtext.ui.shared.internal.Activator.start() of bundle org.eclipse.xtext.ui.shared.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:839)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:767)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:605)
+	at org.eclipse.osgi.container.Module.start(Module.java:468)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:513)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	... 28 more
+Caused by: org.eclipse.core.runtime.CoreException: Xtext configuration error!
+This error might indicate missing version constraints of installed Xtext based bundles.
+The following bundles were detected that require Xtext UI:
+- org.eclipse.emf.mwe2.language.ui 2.14.0.v20221117-1134 [ACTIVE]
+The installed Xtext bundle versions are:
+- org.eclipse.xtext 2.31.0.v20230529-0659 [ACTIVE]
+- org.eclipse.xtext.ide 2.31.0.v20230529-0659 [ACTIVE]
+- org.eclipse.xtext.ui 2.31.0.v20230529-0659 [ACTIVE]
+- org.eclipse.xtext.ui.shared 2.31.0.v20230529-0659 [STARTING]
+
+	at org.eclipse.xtext.ui.shared.internal.Activator.handleGuiceInitializationError(Activator.java:141)
+	at org.eclipse.xtext.ui.shared.internal.Activator.initializeInjector(Activator.java:108)
+	at org.eclipse.xtext.ui.shared.internal.Activator.start(Activator.java:221)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	... 35 more
+Caused by: com.google.inject.CreationException: Unable to create injector, see the following errors:
+
+1) [Guice/ErrorInjectingMethod]: NoClassDefFoundError: org/eclipse/jdt/core/IElementChangedListener
+  at XtextResourceSetProvider.setContributions(XtextResourceSetProvider.java:32)
+  at XtextResourceSetProvider.class(XtextResourceSetProvider.java:32)
+  while locating XtextResourceSetProvider
+  at ResourceLoaderProviders$AbstractResourceLoaderProvider.resourceSetProvider(ResourceLoaderProviders.java:29)
+      \_ for field resourceSetProvider
+  at SharedModule.configure(SharedModule.java:174)
+
+Learn more:
+  https://github.com/google/guice/wiki/ERROR_INJECTING_METHOD
+Caused by: NoClassDefFoundError: org/eclipse/jdt/core/IElementChangedListener
+	at java.base/ClassLoader.defineClass1(Native Method)
+	at java.base/ClassLoader.defineClass(ClassLoader.java:1017)
+	at ModuleClassLoader.defineClass(ModuleClassLoader.java:283)
+	at ClasspathManager.defineClass(ClasspathManager.java:716)
+	at ClasspathManager.findClassImpl(ClasspathManager.java:639)
+	at ClasspathManager.findLocalClassImpl(ClasspathManager.java:607)
+	at ClasspathManager.findLocalClassImpl(ClasspathManager.java:587)
+	at ClasspathManager.findLocalClass(ClasspathManager.java:566)
+	at ModuleClassLoader.findLocalClass(ModuleClassLoader.java:335)
+	at BundleLoader.findLocalClass(BundleLoader.java:397)
+	at SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at BundleLoader.findClass0(BundleLoader.java:496)
+	at BundleLoader.findClass(BundleLoader.java:416)
+	at ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/ClassLoader.loadClass(ClassLoader.java:525)
+	at CommonTypesContribution.configure(CommonTypesContribution.java:42)
+	at Elements$RecordingBinder.install(Elements.java:426)
+	at SharedStateContributionRegistryImpl$2.configure(SharedStateContributionRegistryImpl.java:157)
+	at Elements$RecordingBinder.install(Elements.java:426)
+	at Elements.getElements(Elements.java:113)
+	at InjectorShell$Builder.build(InjectorShell.java:160)
+	at InternalInjectorCreator.build(InternalInjectorCreator.java:107)
+	at InjectorImpl.createChildInjector(InjectorImpl.java:240)
+	at InjectorImpl.createChildInjector(InjectorImpl.java:245)
+	at SharedStateContributionRegistryImpl.createInjectorWithoutJITBindings(SharedStateContributionRegistryImpl.java:62)
+	at SharedStateContributionRegistryImpl.createContribution(SharedStateContributionRegistryImpl.java:147)
+	at SharedStateContributionRegistryImpl.initializeContributions(SharedStateContributionRegistryImpl.java:129)
+	at SharedStateContributionRegistryImpl.getContributions(SharedStateContributionRegistryImpl.java:69)
+	at SharedStateContributionRegistryImpl.getContributedInstances(SharedStateContributionRegistryImpl.java:77)
+	at XtextResourceSetProvider.setContributions(XtextResourceSetProvider.java:44)
+	at java.base/NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/Method.invoke(Method.java:568)
+	at SingleMethodInjector$2.invoke(SingleMethodInjector.java:72)
+	at SingleMethodInjector.inject(SingleMethodInjector.java:87)
+	at MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:146)
+	at ConstructorInjector.provision(ConstructorInjector.java:124)
+	at ConstructorInjector.construct(ConstructorInjector.java:91)
+	at ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:300)
+	at ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+	at SingletonScope$1.get(SingletonScope.java:169)
+	at InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:45)
+	at FactoryProxy.get(FactoryProxy.java:60)
+	at ExposedKeyFactory.get(ExposedKeyFactory.java:57)
+	at SingleFieldInjector.inject(SingleFieldInjector.java:50)
+	at MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:146)
+	at MembersInjectorImpl.injectAndNotify(MembersInjectorImpl.java:101)
+	at Initializer$InjectableReference.get(Initializer.java:256)
+	at Initializer.injectAll(Initializer.java:153)
+	at InternalInjectorCreator.injectDynamically(InternalInjectorCreator.java:180)
+	at InternalInjectorCreator.build(InternalInjectorCreator.java:113)
+	at Guice.createInjector(Guice.java:87)
+	at Guice.createInjector(Guice.java:69)
+	at Guice.createInjector(Guice.java:59)
+	at internal.Activator.initializeInjector(Activator.java:100)
+	at internal.Activator.start(Activator.java:221)
+	at BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/AccessController.doPrivileged(AccessController.java:569)
+	at BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	at BundleContextImpl.start(BundleContextImpl.java:767)
+	at EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at Module.doStart(Module.java:605)
+	at Module.start(Module.java:468)
+	at SecureAction.start(SecureAction.java:513)
+	at EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	at ClasspathManager.findLocalClass(ClasspathManager.java:570)
+	at ModuleClassLoader.findLocalClass(ModuleClassLoader.java:335)
+	at BundleLoader.findLocalClass(BundleLoader.java:397)
+	at SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at BundleLoader.findClass0(BundleLoader.java:496)
+	at BundleLoader.findClass(BundleLoader.java:416)
+	at ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/ClassLoader.loadClass(ClassLoader.java:525)
+	at ecore.Activator.initializeEcoreInjector(Activator.java:50)
+	at ecore.Activator.start(Activator.java:58)
+	at BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/AccessController.doPrivileged(AccessController.java:569)
+	at BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	at BundleContextImpl.start(BundleContextImpl.java:767)
+	at EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at Module.doStart(Module.java:605)
+	at Module.start(Module.java:468)
+	at ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1852)
+	at EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1845)
+	at ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1788)
+	at ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1750)
+	at ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1672)
+	at ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at EventManager.dispatchEvent(EventManager.java:234)
+	at EventManager$EventThread.run(EventManager.java:345)
+Caused by: ClassNotFoundException: An error occurred while automatically activating bundle org.eclipse.jdt.core (453).
+	at EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:126)
+	at ClasspathManager.findLocalClass(ClasspathManager.java:570)
+	at ModuleClassLoader.findLocalClass(ModuleClassLoader.java:335)
+	at BundleLoader.findLocalClass(BundleLoader.java:397)
+	at SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at BundleLoader.findClass0(BundleLoader.java:496)
+	at BundleLoader.findClass(BundleLoader.java:416)
+	at ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/ClassLoader.loadClass(ClassLoader.java:525)
+	at AptPlugin.start(AptPlugin.java:111)
+	... 18 more
+Caused by: BundleException: Exception in JavaCore.start() of bundle org.eclipse.jdt.core.
+	at BundleContextImpl.startActivator(BundleContextImpl.java:839)
+	at BundleContextImpl.start(BundleContextImpl.java:767)
+	at EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at Module.doStart(Module.java:605)
+	at Module.start(Module.java:468)
+	at SecureAction.start(SecureAction.java:513)
+	at EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	... 27 more
+Caused by: ExceptionInInitializerError
+	at JavaCore.start(JavaCore.java:6477)
+	at BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/AccessController.doPrivileged(AccessController.java:569)
+	at BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	... 34 more
+Caused by: IllegalStateException: Workspace is already closed or not ready yet. Consider tracking the IWorkspace service (using your favorite technique, e.g. Declarative Services, ServiceTracker, Blueprint, ...) instead of calling the static method here to prevent such issues!
+	at ResourcesPlugin.getWorkspace(ResourcesPlugin.java:502)
+	at WorkspaceJob.<init>(WorkspaceJob.java:68)
+	at ExternalFoldersManager$1InitializeFolders.<init>(ExternalFoldersManager.java:84)
+	at ExternalFoldersManager.<init>(ExternalFoldersManager.java:98)
+	at ExternalFoldersManager.getExternalFoldersManager(ExternalFoldersManager.java:107)
+	at JavaModelManager.<init>(JavaModelManager.java:596)
+	at JavaModelManager.<clinit>(JavaModelManager.java:1207)
+	... 39 more
+
+2) [Guice/ErrorInjectingMethod]: NoClassDefFoundError: org/eclipse/jdt/core/IElementChangedListener
+  at XtextResourceSetProvider.setContributions(XtextResourceSetProvider.java:32)
+  at XtextResourceSetProvider.class(XtextResourceSetProvider.java:32)
+  while locating XtextResourceSetProvider
+  at ResourceLoaderProviders$AbstractResourceLoaderProvider.resourceSetProvider(ResourceLoaderProviders.java:29)
+      \_ for field resourceSetProvider
+  at SharedModule.configure(SharedModule.java:176)
+
+Learn more:
+  https://github.com/google/guice/wiki/ERROR_INJECTING_METHOD
+Caused by: NoClassDefFoundError: org/eclipse/jdt/core/IElementChangedListener
+	at CommonTypesContribution.configure(CommonTypesContribution.java:42)
+	at Elements$RecordingBinder.install(Elements.java:426)
+	at SharedStateContributionRegistryImpl$2.configure(SharedStateContributionRegistryImpl.java:157)
+	at Elements$RecordingBinder.install(Elements.java:426)
+	at Elements.getElements(Elements.java:113)
+	at InjectorShell$Builder.build(InjectorShell.java:160)
+	at InternalInjectorCreator.build(InternalInjectorCreator.java:107)
+	at InjectorImpl.createChildInjector(InjectorImpl.java:240)
+	at InjectorImpl.createChildInjector(InjectorImpl.java:245)
+	at SharedStateContributionRegistryImpl.createInjectorWithoutJITBindings(SharedStateContributionRegistryImpl.java:62)
+	at SharedStateContributionRegistryImpl.createContribution(SharedStateContributionRegistryImpl.java:147)
+	at SharedStateContributionRegistryImpl.initializeContributions(SharedStateContributionRegistryImpl.java:129)
+	at SharedStateContributionRegistryImpl.getContributions(SharedStateContributionRegistryImpl.java:69)
+	at SharedStateContributionRegistryImpl.getContributedInstances(SharedStateContributionRegistryImpl.java:77)
+	at XtextResourceSetProvider.setContributions(XtextResourceSetProvider.java:44)
+	at java.base/NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/Method.invoke(Method.java:568)
+	at SingleMethodInjector$2.invoke(SingleMethodInjector.java:72)
+	at SingleMethodInjector.inject(SingleMethodInjector.java:87)
+	at MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:146)
+	at ConstructorInjector.provision(ConstructorInjector.java:124)
+	at ConstructorInjector.construct(ConstructorInjector.java:91)
+	at ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:300)
+	at ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+	at SingletonScope$1.get(SingletonScope.java:169)
+	at InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:45)
+	at FactoryProxy.get(FactoryProxy.java:60)
+	at ExposedKeyFactory.get(ExposedKeyFactory.java:57)
+	at SingleFieldInjector.inject(SingleFieldInjector.java:50)
+	at MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:146)
+	at MembersInjectorImpl.injectAndNotify(MembersInjectorImpl.java:101)
+	at Initializer$InjectableReference.get(Initializer.java:256)
+	at Initializer.injectAll(Initializer.java:153)
+	at InternalInjectorCreator.injectDynamically(InternalInjectorCreator.java:180)
+	at InternalInjectorCreator.build(InternalInjectorCreator.java:113)
+	at Guice.createInjector(Guice.java:87)
+	at Guice.createInjector(Guice.java:69)
+	at Guice.createInjector(Guice.java:59)
+	at internal.Activator.initializeInjector(Activator.java:100)
+	at internal.Activator.start(Activator.java:221)
+	at BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/AccessController.doPrivileged(AccessController.java:569)
+	at BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	at BundleContextImpl.start(BundleContextImpl.java:767)
+	at EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at Module.doStart(Module.java:605)
+	at Module.start(Module.java:468)
+	at SecureAction.start(SecureAction.java:513)
+	at EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	at ClasspathManager.findLocalClass(ClasspathManager.java:570)
+	at ModuleClassLoader.findLocalClass(ModuleClassLoader.java:335)
+	at BundleLoader.findLocalClass(BundleLoader.java:397)
+	at SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at BundleLoader.findClass0(BundleLoader.java:496)
+	at BundleLoader.findClass(BundleLoader.java:416)
+	at ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/ClassLoader.loadClass(ClassLoader.java:525)
+	at ecore.Activator.initializeEcoreInjector(Activator.java:50)
+	at ecore.Activator.start(Activator.java:58)
+	at BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/AccessController.doPrivileged(AccessController.java:569)
+	at BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	at BundleContextImpl.start(BundleContextImpl.java:767)
+	at EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at Module.doStart(Module.java:605)
+	at Module.start(Module.java:468)
+	at ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1852)
+	at EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1845)
+	at ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1788)
+	at ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1750)
+	at ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1672)
+	at ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at EventManager.dispatchEvent(EventManager.java:234)
+	at EventManager$EventThread.run(EventManager.java:345)
+Caused by: ClassNotFoundException: An error occurred while automatically activating bundle org.eclipse.jdt.core (453).
+	... 81 more
+
+3) [Guice/ErrorInjectingMethod]: NoClassDefFoundError: org/eclipse/jdt/core/IElementChangedListener
+  at XtextResourceSetProvider.setContributions(XtextResourceSetProvider.java:32)
+  at XtextResourceSetProvider.class(XtextResourceSetProvider.java:32)
+  while locating XtextResourceSetProvider
+  at ResourceLoaderProviders$AbstractResourceLoaderProvider.resourceSetProvider(ResourceLoaderProviders.java:29)
+      \_ for field resourceSetProvider
+  at SharedModule.configure(SharedModule.java:180)
+
+Learn more:
+  https://github.com/google/guice/wiki/ERROR_INJECTING_METHOD
+Caused by: NoClassDefFoundError (same stack trace as error #2)
+3 errors
+
+======================
+Full classname legend:
+======================
+AccessController:                                       "java.security.AccessController"
+AptPlugin:                                              "org.eclipse.jdt.apt.core.internal.AptPlugin"
+BundleContextImpl:                                      "org.eclipse.osgi.internal.framework.BundleContextImpl"
+BundleContextImpl$2:                                    "org.eclipse.osgi.internal.framework.BundleContextImpl$2"
+BundleException:                                        "org.osgi.framework.BundleException"
+BundleLoader:                                           "org.eclipse.osgi.internal.loader.BundleLoader"
+ClasspathManager:                                       "org.eclipse.osgi.internal.loader.classpath.ClasspathManager"
+CommonTypesContribution:                                "org.eclipse.xtext.common.types.shared.CommonTypesContribution"
+ConstructorBindingImpl$Factory:                         "com.google.inject.internal.ConstructorBindingImpl$Factory"
+ConstructorInjector:                                    "com.google.inject.internal.ConstructorInjector"
+DelegatingMethodAccessorImpl:                           "jdk.internal.reflect.DelegatingMethodAccessorImpl"
+EclipseLazyStarter:                                     "org.eclipse.osgi.internal.hooks.EclipseLazyStarter"
+Elements:                                               "com.google.inject.spi.Elements"
+Elements$RecordingBinder:                               "com.google.inject.spi.Elements$RecordingBinder"
+EquinoxBundle:                                          "org.eclipse.osgi.internal.framework.EquinoxBundle"
+EquinoxBundle$EquinoxModule:                            "org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule"
+EquinoxContainerAdaptor$1$1:                            "org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1"
+EventManager:                                           "org.eclipse.osgi.framework.eventmgr.EventManager"
+EventManager$EventThread:                               "org.eclipse.osgi.framework.eventmgr.EventManager$EventThread"
+ExposedKeyFactory:                                      "com.google.inject.internal.ExposedKeyFactory"
+ExternalFoldersManager:                                 "org.eclipse.jdt.internal.core.ExternalFoldersManager"
+ExternalFoldersManager$1InitializeFolders:              "org.eclipse.jdt.internal.core.ExternalFoldersManager$1InitializeFolders"
+FactoryProxy:                                           "com.google.inject.internal.FactoryProxy"
+Guice:                                                  "com.google.inject.Guice"
+IWorkspace:                                             "org.eclipse.core.resources.IWorkspace"
+Initializer:                                            "com.google.inject.internal.Initializer"
+Initializer$InjectableReference:                        "com.google.inject.internal.Initializer$InjectableReference"
+InjectorImpl:                                           "com.google.inject.internal.InjectorImpl"
+InjectorShell$Builder:                                  "com.google.inject.internal.InjectorShell$Builder"
+InternalFactoryToProviderAdapter:                       "com.google.inject.internal.InternalFactoryToProviderAdapter"
+InternalInjectorCreator:                                "com.google.inject.internal.InternalInjectorCreator"
+JavaCore:                                               "org.eclipse.jdt.core.JavaCore"
+JavaModelManager:                                       "org.eclipse.jdt.internal.core.JavaModelManager"
+MembersInjectorImpl:                                    "com.google.inject.internal.MembersInjectorImpl"
+Method:                                                 "java.lang.reflect.Method"
+Module:                                                 "org.eclipse.osgi.container.Module"
+ModuleClassLoader:                                      "org.eclipse.osgi.internal.loader.ModuleClassLoader"
+ModuleContainer$ContainerStartLevel:                    "org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel"
+ModuleContainer$ContainerStartLevel$2:                  "org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2"
+NativeMethodAccessorImpl:                               "jdk.internal.reflect.NativeMethodAccessorImpl"
+ProviderToInternalFactoryAdapter:                       "com.google.inject.internal.ProviderToInternalFactoryAdapter"
+ResourceLoaderProviders$AbstractResourceLoaderProvider: "org.eclipse.xtext.builder.resourceloader.ResourceLoaderProviders$AbstractResourceLoaderProvider"
+ResourcesPlugin:                                        "org.eclipse.core.resources.ResourcesPlugin"
+SecureAction:                                           "org.eclipse.osgi.framework.util.SecureAction"
+SharedModule:                                           "org.eclipse.xtext.ui.shared.internal.SharedModule"
+SharedStateContributionRegistryImpl:                    "org.eclipse.xtext.ui.shared.internal.SharedStateContributionRegistryImpl"
+SharedStateContributionRegistryImpl$2:                  "org.eclipse.xtext.ui.shared.internal.SharedStateContributionRegistryImpl$2"
+SingleFieldInjector:                                    "com.google.inject.internal.SingleFieldInjector"
+SingleMethodInjector:                                   "com.google.inject.internal.SingleMethodInjector"
+SingleMethodInjector$2:                                 "com.google.inject.internal.SingleMethodInjector$2"
+SingleSourcePackage:                                    "org.eclipse.osgi.internal.loader.sources.SingleSourcePackage"
+SingletonScope$1:                                       "com.google.inject.internal.SingletonScope$1"
+WorkspaceJob:                                           "org.eclipse.core.resources.WorkspaceJob"
+XtextResourceSetProvider:                               "org.eclipse.xtext.ui.resource.XtextResourceSetProvider"
+ecore.Activator:                                        "org.eclipse.xtext.ui.ecore.Activator"
+internal.Activator:                                     "org.eclipse.xtext.ui.shared.internal.Activator"
+========================
+End of classname legend:
+========================
+
+	at com.google.inject.internal.Errors.throwCreationExceptionIfErrorsExist(Errors.java:589)
+	at com.google.inject.internal.InternalInjectorCreator.injectDynamically(InternalInjectorCreator.java:182)
+	at com.google.inject.internal.InternalInjectorCreator.build(InternalInjectorCreator.java:113)
+	at com.google.inject.Guice.createInjector(Guice.java:87)
+	at com.google.inject.Guice.createInjector(Guice.java:69)
+	at com.google.inject.Guice.createInjector(Guice.java:59)
+	at org.eclipse.xtext.ui.shared.internal.Activator.initializeInjector(Activator.java:100)
+	... 40 more
+
+!ENTRY org.eclipse.xtext.ui.shared 4 0 2025-03-11 19:07:59.106
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Error loading bundle activator. org.eclipse.xtext.ui.shared_2.31.0.v20230529-0659 [1081]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:761)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:605)
+	at org.eclipse.osgi.container.Module.start(Module.java:468)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1852)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1845)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1788)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1750)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1672)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+Caused by: java.lang.ClassNotFoundException: An error occurred while automatically activating bundle org.eclipse.xtext.ui.shared (1081).
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:126)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:570)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:335)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:397)
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass0(BundleLoader.java:496)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:416)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	at org.eclipse.xtext.ui.ecore.Activator.initializeEcoreInjector(Activator.java:50)
+	at org.eclipse.xtext.ui.ecore.Activator.start(Activator.java:58)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:767)
+	... 13 more
+Caused by: org.osgi.framework.BundleException: Exception in org.eclipse.xtext.ui.shared.internal.Activator.start() of bundle org.eclipse.xtext.ui.shared.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:839)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:767)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:605)
+	at org.eclipse.osgi.container.Module.start(Module.java:468)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:513)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	... 28 more
+Caused by: org.eclipse.core.runtime.CoreException: Xtext configuration error!
+This error might indicate missing version constraints of installed Xtext based bundles.
+The following bundles were detected that require Xtext UI:
+- org.eclipse.emf.mwe2.language.ui 2.14.0.v20221117-1134 [ACTIVE]
+The installed Xtext bundle versions are:
+- org.eclipse.xtext 2.31.0.v20230529-0659 [ACTIVE]
+- org.eclipse.xtext.ide 2.31.0.v20230529-0659 [ACTIVE]
+- org.eclipse.xtext.ui 2.31.0.v20230529-0659 [ACTIVE]
+- org.eclipse.xtext.ui.shared 2.31.0.v20230529-0659 [STARTING]
+
+	at org.eclipse.xtext.ui.shared.internal.Activator.handleGuiceInitializationError(Activator.java:141)
+	at org.eclipse.xtext.ui.shared.internal.Activator.initializeInjector(Activator.java:108)
+	at org.eclipse.xtext.ui.shared.internal.Activator.start(Activator.java:221)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	... 35 more
+Caused by: com.google.inject.CreationException: Unable to create injector, see the following errors:
+
+1) [Guice/ErrorInjectingMethod]: NoClassDefFoundError: org/eclipse/jdt/core/IElementChangedListener
+  at XtextResourceSetProvider.setContributions(XtextResourceSetProvider.java:32)
+  at XtextResourceSetProvider.class(XtextResourceSetProvider.java:32)
+  while locating XtextResourceSetProvider
+  at ResourceLoaderProviders$AbstractResourceLoaderProvider.resourceSetProvider(ResourceLoaderProviders.java:29)
+      \_ for field resourceSetProvider
+  at SharedModule.configure(SharedModule.java:174)
+
+Learn more:
+  https://github.com/google/guice/wiki/ERROR_INJECTING_METHOD
+Caused by: NoClassDefFoundError: org/eclipse/jdt/core/IElementChangedListener
+	at java.base/ClassLoader.defineClass1(Native Method)
+	at java.base/ClassLoader.defineClass(ClassLoader.java:1017)
+	at ModuleClassLoader.defineClass(ModuleClassLoader.java:283)
+	at ClasspathManager.defineClass(ClasspathManager.java:716)
+	at ClasspathManager.findClassImpl(ClasspathManager.java:639)
+	at ClasspathManager.findLocalClassImpl(ClasspathManager.java:607)
+	at ClasspathManager.findLocalClassImpl(ClasspathManager.java:587)
+	at ClasspathManager.findLocalClass(ClasspathManager.java:566)
+	at ModuleClassLoader.findLocalClass(ModuleClassLoader.java:335)
+	at BundleLoader.findLocalClass(BundleLoader.java:397)
+	at SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at BundleLoader.findClass0(BundleLoader.java:496)
+	at BundleLoader.findClass(BundleLoader.java:416)
+	at ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/ClassLoader.loadClass(ClassLoader.java:525)
+	at CommonTypesContribution.configure(CommonTypesContribution.java:42)
+	at Elements$RecordingBinder.install(Elements.java:426)
+	at SharedStateContributionRegistryImpl$2.configure(SharedStateContributionRegistryImpl.java:157)
+	at Elements$RecordingBinder.install(Elements.java:426)
+	at Elements.getElements(Elements.java:113)
+	at InjectorShell$Builder.build(InjectorShell.java:160)
+	at InternalInjectorCreator.build(InternalInjectorCreator.java:107)
+	at InjectorImpl.createChildInjector(InjectorImpl.java:240)
+	at InjectorImpl.createChildInjector(InjectorImpl.java:245)
+	at SharedStateContributionRegistryImpl.createInjectorWithoutJITBindings(SharedStateContributionRegistryImpl.java:62)
+	at SharedStateContributionRegistryImpl.createContribution(SharedStateContributionRegistryImpl.java:147)
+	at SharedStateContributionRegistryImpl.initializeContributions(SharedStateContributionRegistryImpl.java:129)
+	at SharedStateContributionRegistryImpl.getContributions(SharedStateContributionRegistryImpl.java:69)
+	at SharedStateContributionRegistryImpl.getContributedInstances(SharedStateContributionRegistryImpl.java:77)
+	at XtextResourceSetProvider.setContributions(XtextResourceSetProvider.java:44)
+	at java.base/NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/Method.invoke(Method.java:568)
+	at SingleMethodInjector$2.invoke(SingleMethodInjector.java:72)
+	at SingleMethodInjector.inject(SingleMethodInjector.java:87)
+	at MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:146)
+	at ConstructorInjector.provision(ConstructorInjector.java:124)
+	at ConstructorInjector.construct(ConstructorInjector.java:91)
+	at ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:300)
+	at ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+	at SingletonScope$1.get(SingletonScope.java:169)
+	at InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:45)
+	at FactoryProxy.get(FactoryProxy.java:60)
+	at ExposedKeyFactory.get(ExposedKeyFactory.java:57)
+	at SingleFieldInjector.inject(SingleFieldInjector.java:50)
+	at MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:146)
+	at MembersInjectorImpl.injectAndNotify(MembersInjectorImpl.java:101)
+	at Initializer$InjectableReference.get(Initializer.java:256)
+	at Initializer.injectAll(Initializer.java:153)
+	at InternalInjectorCreator.injectDynamically(InternalInjectorCreator.java:180)
+	at InternalInjectorCreator.build(InternalInjectorCreator.java:113)
+	at Guice.createInjector(Guice.java:87)
+	at Guice.createInjector(Guice.java:69)
+	at Guice.createInjector(Guice.java:59)
+	at internal.Activator.initializeInjector(Activator.java:100)
+	at internal.Activator.start(Activator.java:221)
+	at BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/AccessController.doPrivileged(AccessController.java:569)
+	at BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	at BundleContextImpl.start(BundleContextImpl.java:767)
+	at EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at Module.doStart(Module.java:605)
+	at Module.start(Module.java:468)
+	at SecureAction.start(SecureAction.java:513)
+	at EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	at ClasspathManager.findLocalClass(ClasspathManager.java:570)
+	at ModuleClassLoader.findLocalClass(ModuleClassLoader.java:335)
+	at BundleLoader.findLocalClass(BundleLoader.java:397)
+	at SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at BundleLoader.findClass0(BundleLoader.java:496)
+	at BundleLoader.findClass(BundleLoader.java:416)
+	at ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/ClassLoader.loadClass(ClassLoader.java:525)
+	at ecore.Activator.initializeEcoreInjector(Activator.java:50)
+	at ecore.Activator.start(Activator.java:58)
+	at BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/AccessController.doPrivileged(AccessController.java:569)
+	at BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	at BundleContextImpl.start(BundleContextImpl.java:767)
+	at EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at Module.doStart(Module.java:605)
+	at Module.start(Module.java:468)
+	at ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1852)
+	at EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1845)
+	at ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1788)
+	at ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1750)
+	at ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1672)
+	at ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at EventManager.dispatchEvent(EventManager.java:234)
+	at EventManager$EventThread.run(EventManager.java:345)
+Caused by: ClassNotFoundException: An error occurred while automatically activating bundle org.eclipse.jdt.core (453).
+	at EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:126)
+	at ClasspathManager.findLocalClass(ClasspathManager.java:570)
+	at ModuleClassLoader.findLocalClass(ModuleClassLoader.java:335)
+	at BundleLoader.findLocalClass(BundleLoader.java:397)
+	at SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at BundleLoader.findClass0(BundleLoader.java:496)
+	at BundleLoader.findClass(BundleLoader.java:416)
+	at ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/ClassLoader.loadClass(ClassLoader.java:525)
+	at AptPlugin.start(AptPlugin.java:111)
+	... 18 more
+Caused by: BundleException: Exception in JavaCore.start() of bundle org.eclipse.jdt.core.
+	at BundleContextImpl.startActivator(BundleContextImpl.java:839)
+	at BundleContextImpl.start(BundleContextImpl.java:767)
+	at EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at Module.doStart(Module.java:605)
+	at Module.start(Module.java:468)
+	at SecureAction.start(SecureAction.java:513)
+	at EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	... 27 more
+Caused by: ExceptionInInitializerError
+	at JavaCore.start(JavaCore.java:6477)
+	at BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/AccessController.doPrivileged(AccessController.java:569)
+	at BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	... 34 more
+Caused by: IllegalStateException: Workspace is already closed or not ready yet. Consider tracking the IWorkspace service (using your favorite technique, e.g. Declarative Services, ServiceTracker, Blueprint, ...) instead of calling the static method here to prevent such issues!
+	at ResourcesPlugin.getWorkspace(ResourcesPlugin.java:502)
+	at WorkspaceJob.<init>(WorkspaceJob.java:68)
+	at ExternalFoldersManager$1InitializeFolders.<init>(ExternalFoldersManager.java:84)
+	at ExternalFoldersManager.<init>(ExternalFoldersManager.java:98)
+	at ExternalFoldersManager.getExternalFoldersManager(ExternalFoldersManager.java:107)
+	at JavaModelManager.<init>(JavaModelManager.java:596)
+	at JavaModelManager.<clinit>(JavaModelManager.java:1207)
+	... 39 more
+
+2) [Guice/ErrorInjectingMethod]: NoClassDefFoundError: org/eclipse/jdt/core/IElementChangedListener
+  at XtextResourceSetProvider.setContributions(XtextResourceSetProvider.java:32)
+  at XtextResourceSetProvider.class(XtextResourceSetProvider.java:32)
+  while locating XtextResourceSetProvider
+  at ResourceLoaderProviders$AbstractResourceLoaderProvider.resourceSetProvider(ResourceLoaderProviders.java:29)
+      \_ for field resourceSetProvider
+  at SharedModule.configure(SharedModule.java:176)
+
+Learn more:
+  https://github.com/google/guice/wiki/ERROR_INJECTING_METHOD
+Caused by: NoClassDefFoundError: org/eclipse/jdt/core/IElementChangedListener
+	at CommonTypesContribution.configure(CommonTypesContribution.java:42)
+	at Elements$RecordingBinder.install(Elements.java:426)
+	at SharedStateContributionRegistryImpl$2.configure(SharedStateContributionRegistryImpl.java:157)
+	at Elements$RecordingBinder.install(Elements.java:426)
+	at Elements.getElements(Elements.java:113)
+	at InjectorShell$Builder.build(InjectorShell.java:160)
+	at InternalInjectorCreator.build(InternalInjectorCreator.java:107)
+	at InjectorImpl.createChildInjector(InjectorImpl.java:240)
+	at InjectorImpl.createChildInjector(InjectorImpl.java:245)
+	at SharedStateContributionRegistryImpl.createInjectorWithoutJITBindings(SharedStateContributionRegistryImpl.java:62)
+	at SharedStateContributionRegistryImpl.createContribution(SharedStateContributionRegistryImpl.java:147)
+	at SharedStateContributionRegistryImpl.initializeContributions(SharedStateContributionRegistryImpl.java:129)
+	at SharedStateContributionRegistryImpl.getContributions(SharedStateContributionRegistryImpl.java:69)
+	at SharedStateContributionRegistryImpl.getContributedInstances(SharedStateContributionRegistryImpl.java:77)
+	at XtextResourceSetProvider.setContributions(XtextResourceSetProvider.java:44)
+	at java.base/NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/Method.invoke(Method.java:568)
+	at SingleMethodInjector$2.invoke(SingleMethodInjector.java:72)
+	at SingleMethodInjector.inject(SingleMethodInjector.java:87)
+	at MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:146)
+	at ConstructorInjector.provision(ConstructorInjector.java:124)
+	at ConstructorInjector.construct(ConstructorInjector.java:91)
+	at ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:300)
+	at ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+	at SingletonScope$1.get(SingletonScope.java:169)
+	at InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:45)
+	at FactoryProxy.get(FactoryProxy.java:60)
+	at ExposedKeyFactory.get(ExposedKeyFactory.java:57)
+	at SingleFieldInjector.inject(SingleFieldInjector.java:50)
+	at MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:146)
+	at MembersInjectorImpl.injectAndNotify(MembersInjectorImpl.java:101)
+	at Initializer$InjectableReference.get(Initializer.java:256)
+	at Initializer.injectAll(Initializer.java:153)
+	at InternalInjectorCreator.injectDynamically(InternalInjectorCreator.java:180)
+	at InternalInjectorCreator.build(InternalInjectorCreator.java:113)
+	at Guice.createInjector(Guice.java:87)
+	at Guice.createInjector(Guice.java:69)
+	at Guice.createInjector(Guice.java:59)
+	at internal.Activator.initializeInjector(Activator.java:100)
+	at internal.Activator.start(Activator.java:221)
+	at BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/AccessController.doPrivileged(AccessController.java:569)
+	at BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	at BundleContextImpl.start(BundleContextImpl.java:767)
+	at EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at Module.doStart(Module.java:605)
+	at Module.start(Module.java:468)
+	at SecureAction.start(SecureAction.java:513)
+	at EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	at ClasspathManager.findLocalClass(ClasspathManager.java:570)
+	at ModuleClassLoader.findLocalClass(ModuleClassLoader.java:335)
+	at BundleLoader.findLocalClass(BundleLoader.java:397)
+	at SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at BundleLoader.findClass0(BundleLoader.java:496)
+	at BundleLoader.findClass(BundleLoader.java:416)
+	at ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/ClassLoader.loadClass(ClassLoader.java:525)
+	at ecore.Activator.initializeEcoreInjector(Activator.java:50)
+	at ecore.Activator.start(Activator.java:58)
+	at BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/AccessController.doPrivileged(AccessController.java:569)
+	at BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	at BundleContextImpl.start(BundleContextImpl.java:767)
+	at EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at Module.doStart(Module.java:605)
+	at Module.start(Module.java:468)
+	at ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1852)
+	at EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1845)
+	at ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1788)
+	at ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1750)
+	at ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1672)
+	at ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at EventManager.dispatchEvent(EventManager.java:234)
+	at EventManager$EventThread.run(EventManager.java:345)
+Caused by: ClassNotFoundException: An error occurred while automatically activating bundle org.eclipse.jdt.core (453).
+	... 81 more
+
+3) [Guice/ErrorInjectingMethod]: NoClassDefFoundError: org/eclipse/jdt/core/IElementChangedListener
+  at XtextResourceSetProvider.setContributions(XtextResourceSetProvider.java:32)
+  at XtextResourceSetProvider.class(XtextResourceSetProvider.java:32)
+  while locating XtextResourceSetProvider
+  at ResourceLoaderProviders$AbstractResourceLoaderProvider.resourceSetProvider(ResourceLoaderProviders.java:29)
+      \_ for field resourceSetProvider
+  at SharedModule.configure(SharedModule.java:180)
+
+Learn more:
+  https://github.com/google/guice/wiki/ERROR_INJECTING_METHOD
+Caused by: NoClassDefFoundError (same stack trace as error #2)
+3 errors
+
+======================
+Full classname legend:
+======================
+AccessController:                                       "java.security.AccessController"
+AptPlugin:                                              "org.eclipse.jdt.apt.core.internal.AptPlugin"
+BundleContextImpl:                                      "org.eclipse.osgi.internal.framework.BundleContextImpl"
+BundleContextImpl$2:                                    "org.eclipse.osgi.internal.framework.BundleContextImpl$2"
+BundleException:                                        "org.osgi.framework.BundleException"
+BundleLoader:                                           "org.eclipse.osgi.internal.loader.BundleLoader"
+ClasspathManager:                                       "org.eclipse.osgi.internal.loader.classpath.ClasspathManager"
+CommonTypesContribution:                                "org.eclipse.xtext.common.types.shared.CommonTypesContribution"
+ConstructorBindingImpl$Factory:                         "com.google.inject.internal.ConstructorBindingImpl$Factory"
+ConstructorInjector:                                    "com.google.inject.internal.ConstructorInjector"
+DelegatingMethodAccessorImpl:                           "jdk.internal.reflect.DelegatingMethodAccessorImpl"
+EclipseLazyStarter:                                     "org.eclipse.osgi.internal.hooks.EclipseLazyStarter"
+Elements:                                               "com.google.inject.spi.Elements"
+Elements$RecordingBinder:                               "com.google.inject.spi.Elements$RecordingBinder"
+EquinoxBundle:                                          "org.eclipse.osgi.internal.framework.EquinoxBundle"
+EquinoxBundle$EquinoxModule:                            "org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule"
+EquinoxContainerAdaptor$1$1:                            "org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1"
+EventManager:                                           "org.eclipse.osgi.framework.eventmgr.EventManager"
+EventManager$EventThread:                               "org.eclipse.osgi.framework.eventmgr.EventManager$EventThread"
+ExposedKeyFactory:                                      "com.google.inject.internal.ExposedKeyFactory"
+ExternalFoldersManager:                                 "org.eclipse.jdt.internal.core.ExternalFoldersManager"
+ExternalFoldersManager$1InitializeFolders:              "org.eclipse.jdt.internal.core.ExternalFoldersManager$1InitializeFolders"
+FactoryProxy:                                           "com.google.inject.internal.FactoryProxy"
+Guice:                                                  "com.google.inject.Guice"
+IWorkspace:                                             "org.eclipse.core.resources.IWorkspace"
+Initializer:                                            "com.google.inject.internal.Initializer"
+Initializer$InjectableReference:                        "com.google.inject.internal.Initializer$InjectableReference"
+InjectorImpl:                                           "com.google.inject.internal.InjectorImpl"
+InjectorShell$Builder:                                  "com.google.inject.internal.InjectorShell$Builder"
+InternalFactoryToProviderAdapter:                       "com.google.inject.internal.InternalFactoryToProviderAdapter"
+InternalInjectorCreator:                                "com.google.inject.internal.InternalInjectorCreator"
+JavaCore:                                               "org.eclipse.jdt.core.JavaCore"
+JavaModelManager:                                       "org.eclipse.jdt.internal.core.JavaModelManager"
+MembersInjectorImpl:                                    "com.google.inject.internal.MembersInjectorImpl"
+Method:                                                 "java.lang.reflect.Method"
+Module:                                                 "org.eclipse.osgi.container.Module"
+ModuleClassLoader:                                      "org.eclipse.osgi.internal.loader.ModuleClassLoader"
+ModuleContainer$ContainerStartLevel:                    "org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel"
+ModuleContainer$ContainerStartLevel$2:                  "org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2"
+NativeMethodAccessorImpl:                               "jdk.internal.reflect.NativeMethodAccessorImpl"
+ProviderToInternalFactoryAdapter:                       "com.google.inject.internal.ProviderToInternalFactoryAdapter"
+ResourceLoaderProviders$AbstractResourceLoaderProvider: "org.eclipse.xtext.builder.resourceloader.ResourceLoaderProviders$AbstractResourceLoaderProvider"
+ResourcesPlugin:                                        "org.eclipse.core.resources.ResourcesPlugin"
+SecureAction:                                           "org.eclipse.osgi.framework.util.SecureAction"
+SharedModule:                                           "org.eclipse.xtext.ui.shared.internal.SharedModule"
+SharedStateContributionRegistryImpl:                    "org.eclipse.xtext.ui.shared.internal.SharedStateContributionRegistryImpl"
+SharedStateContributionRegistryImpl$2:                  "org.eclipse.xtext.ui.shared.internal.SharedStateContributionRegistryImpl$2"
+SingleFieldInjector:                                    "com.google.inject.internal.SingleFieldInjector"
+SingleMethodInjector:                                   "com.google.inject.internal.SingleMethodInjector"
+SingleMethodInjector$2:                                 "com.google.inject.internal.SingleMethodInjector$2"
+SingleSourcePackage:                                    "org.eclipse.osgi.internal.loader.sources.SingleSourcePackage"
+SingletonScope$1:                                       "com.google.inject.internal.SingletonScope$1"
+WorkspaceJob:                                           "org.eclipse.core.resources.WorkspaceJob"
+XtextResourceSetProvider:                               "org.eclipse.xtext.ui.resource.XtextResourceSetProvider"
+ecore.Activator:                                        "org.eclipse.xtext.ui.ecore.Activator"
+internal.Activator:                                     "org.eclipse.xtext.ui.shared.internal.Activator"
+========================
+End of classname legend:
+========================
+
+	at com.google.inject.internal.Errors.throwCreationExceptionIfErrorsExist(Errors.java:589)
+	at com.google.inject.internal.InternalInjectorCreator.injectDynamically(InternalInjectorCreator.java:182)
+	at com.google.inject.internal.InternalInjectorCreator.build(InternalInjectorCreator.java:113)
+	at com.google.inject.Guice.createInjector(Guice.java:87)
+	at com.google.inject.Guice.createInjector(Guice.java:69)
+	at com.google.inject.Guice.createInjector(Guice.java:59)
+	at org.eclipse.xtext.ui.shared.internal.Activator.initializeInjector(Activator.java:100)
+	... 40 more
+Root exception:
+java.lang.ClassNotFoundException: An error occurred while automatically activating bundle org.eclipse.xtext.ui.shared (1081).
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:126)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:570)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:335)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:397)
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass0(BundleLoader.java:496)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:416)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	at org.eclipse.xtext.ui.ecore.Activator.initializeEcoreInjector(Activator.java:50)
+	at org.eclipse.xtext.ui.ecore.Activator.start(Activator.java:58)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:767)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:605)
+	at org.eclipse.osgi.container.Module.start(Module.java:468)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1852)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1845)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1788)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1750)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1672)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+Caused by: org.osgi.framework.BundleException: Exception in org.eclipse.xtext.ui.shared.internal.Activator.start() of bundle org.eclipse.xtext.ui.shared.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:839)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:767)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:605)
+	at org.eclipse.osgi.container.Module.start(Module.java:468)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:513)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	... 28 more
+Caused by: org.eclipse.core.runtime.CoreException: Xtext configuration error!
+This error might indicate missing version constraints of installed Xtext based bundles.
+The following bundles were detected that require Xtext UI:
+- org.eclipse.emf.mwe2.language.ui 2.14.0.v20221117-1134 [ACTIVE]
+The installed Xtext bundle versions are:
+- org.eclipse.xtext 2.31.0.v20230529-0659 [ACTIVE]
+- org.eclipse.xtext.ide 2.31.0.v20230529-0659 [ACTIVE]
+- org.eclipse.xtext.ui 2.31.0.v20230529-0659 [ACTIVE]
+- org.eclipse.xtext.ui.shared 2.31.0.v20230529-0659 [STARTING]
+
+	at org.eclipse.xtext.ui.shared.internal.Activator.handleGuiceInitializationError(Activator.java:141)
+	at org.eclipse.xtext.ui.shared.internal.Activator.initializeInjector(Activator.java:108)
+	at org.eclipse.xtext.ui.shared.internal.Activator.start(Activator.java:221)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	... 35 more
+Caused by: com.google.inject.CreationException: Unable to create injector, see the following errors:
+
+1) [Guice/ErrorInjectingMethod]: NoClassDefFoundError: org/eclipse/jdt/core/IElementChangedListener
+  at XtextResourceSetProvider.setContributions(XtextResourceSetProvider.java:32)
+  at XtextResourceSetProvider.class(XtextResourceSetProvider.java:32)
+  while locating XtextResourceSetProvider
+  at ResourceLoaderProviders$AbstractResourceLoaderProvider.resourceSetProvider(ResourceLoaderProviders.java:29)
+      \_ for field resourceSetProvider
+  at SharedModule.configure(SharedModule.java:174)
+
+Learn more:
+  https://github.com/google/guice/wiki/ERROR_INJECTING_METHOD
+Caused by: NoClassDefFoundError: org/eclipse/jdt/core/IElementChangedListener
+	at java.base/ClassLoader.defineClass1(Native Method)
+	at java.base/ClassLoader.defineClass(ClassLoader.java:1017)
+	at ModuleClassLoader.defineClass(ModuleClassLoader.java:283)
+	at ClasspathManager.defineClass(ClasspathManager.java:716)
+	at ClasspathManager.findClassImpl(ClasspathManager.java:639)
+	at ClasspathManager.findLocalClassImpl(ClasspathManager.java:607)
+	at ClasspathManager.findLocalClassImpl(ClasspathManager.java:587)
+	at ClasspathManager.findLocalClass(ClasspathManager.java:566)
+	at ModuleClassLoader.findLocalClass(ModuleClassLoader.java:335)
+	at BundleLoader.findLocalClass(BundleLoader.java:397)
+	at SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at BundleLoader.findClass0(BundleLoader.java:496)
+	at BundleLoader.findClass(BundleLoader.java:416)
+	at ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/ClassLoader.loadClass(ClassLoader.java:525)
+	at CommonTypesContribution.configure(CommonTypesContribution.java:42)
+	at Elements$RecordingBinder.install(Elements.java:426)
+	at SharedStateContributionRegistryImpl$2.configure(SharedStateContributionRegistryImpl.java:157)
+	at Elements$RecordingBinder.install(Elements.java:426)
+	at Elements.getElements(Elements.java:113)
+	at InjectorShell$Builder.build(InjectorShell.java:160)
+	at InternalInjectorCreator.build(InternalInjectorCreator.java:107)
+	at InjectorImpl.createChildInjector(InjectorImpl.java:240)
+	at InjectorImpl.createChildInjector(InjectorImpl.java:245)
+	at SharedStateContributionRegistryImpl.createInjectorWithoutJITBindings(SharedStateContributionRegistryImpl.java:62)
+	at SharedStateContributionRegistryImpl.createContribution(SharedStateContributionRegistryImpl.java:147)
+	at SharedStateContributionRegistryImpl.initializeContributions(SharedStateContributionRegistryImpl.java:129)
+	at SharedStateContributionRegistryImpl.getContributions(SharedStateContributionRegistryImpl.java:69)
+	at SharedStateContributionRegistryImpl.getContributedInstances(SharedStateContributionRegistryImpl.java:77)
+	at XtextResourceSetProvider.setContributions(XtextResourceSetProvider.java:44)
+	at java.base/NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/Method.invoke(Method.java:568)
+	at SingleMethodInjector$2.invoke(SingleMethodInjector.java:72)
+	at SingleMethodInjector.inject(SingleMethodInjector.java:87)
+	at MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:146)
+	at ConstructorInjector.provision(ConstructorInjector.java:124)
+	at ConstructorInjector.construct(ConstructorInjector.java:91)
+	at ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:300)
+	at ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+	at SingletonScope$1.get(SingletonScope.java:169)
+	at InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:45)
+	at FactoryProxy.get(FactoryProxy.java:60)
+	at ExposedKeyFactory.get(ExposedKeyFactory.java:57)
+	at SingleFieldInjector.inject(SingleFieldInjector.java:50)
+	at MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:146)
+	at MembersInjectorImpl.injectAndNotify(MembersInjectorImpl.java:101)
+	at Initializer$InjectableReference.get(Initializer.java:256)
+	at Initializer.injectAll(Initializer.java:153)
+	at InternalInjectorCreator.injectDynamically(InternalInjectorCreator.java:180)
+	at InternalInjectorCreator.build(InternalInjectorCreator.java:113)
+	at Guice.createInjector(Guice.java:87)
+	at Guice.createInjector(Guice.java:69)
+	at Guice.createInjector(Guice.java:59)
+	at internal.Activator.initializeInjector(Activator.java:100)
+	at internal.Activator.start(Activator.java:221)
+	at BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/AccessController.doPrivileged(AccessController.java:569)
+	at BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	at BundleContextImpl.start(BundleContextImpl.java:767)
+	at EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at Module.doStart(Module.java:605)
+	at Module.start(Module.java:468)
+	at SecureAction.start(SecureAction.java:513)
+	at EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	at ClasspathManager.findLocalClass(ClasspathManager.java:570)
+	at ModuleClassLoader.findLocalClass(ModuleClassLoader.java:335)
+	at BundleLoader.findLocalClass(BundleLoader.java:397)
+	at SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at BundleLoader.findClass0(BundleLoader.java:496)
+	at BundleLoader.findClass(BundleLoader.java:416)
+	at ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/ClassLoader.loadClass(ClassLoader.java:525)
+	at ecore.Activator.initializeEcoreInjector(Activator.java:50)
+	at ecore.Activator.start(Activator.java:58)
+	at BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/AccessController.doPrivileged(AccessController.java:569)
+	at BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	at BundleContextImpl.start(BundleContextImpl.java:767)
+	at EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at Module.doStart(Module.java:605)
+	at Module.start(Module.java:468)
+	at ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1852)
+	at EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1845)
+	at ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1788)
+	at ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1750)
+	at ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1672)
+	at ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at EventManager.dispatchEvent(EventManager.java:234)
+	at EventManager$EventThread.run(EventManager.java:345)
+Caused by: ClassNotFoundException: An error occurred while automatically activating bundle org.eclipse.jdt.core (453).
+	at EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:126)
+	at ClasspathManager.findLocalClass(ClasspathManager.java:570)
+	at ModuleClassLoader.findLocalClass(ModuleClassLoader.java:335)
+	at BundleLoader.findLocalClass(BundleLoader.java:397)
+	at SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at BundleLoader.findClass0(BundleLoader.java:496)
+	at BundleLoader.findClass(BundleLoader.java:416)
+	at ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/ClassLoader.loadClass(ClassLoader.java:525)
+	at AptPlugin.start(AptPlugin.java:111)
+	... 18 more
+Caused by: BundleException: Exception in JavaCore.start() of bundle org.eclipse.jdt.core.
+	at BundleContextImpl.startActivator(BundleContextImpl.java:839)
+	at BundleContextImpl.start(BundleContextImpl.java:767)
+	at EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at Module.doStart(Module.java:605)
+	at Module.start(Module.java:468)
+	at SecureAction.start(SecureAction.java:513)
+	at EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	... 27 more
+Caused by: ExceptionInInitializerError
+	at JavaCore.start(JavaCore.java:6477)
+	at BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/AccessController.doPrivileged(AccessController.java:569)
+	at BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	... 34 more
+Caused by: IllegalStateException: Workspace is already closed or not ready yet. Consider tracking the IWorkspace service (using your favorite technique, e.g. Declarative Services, ServiceTracker, Blueprint, ...) instead of calling the static method here to prevent such issues!
+	at ResourcesPlugin.getWorkspace(ResourcesPlugin.java:502)
+	at WorkspaceJob.<init>(WorkspaceJob.java:68)
+	at ExternalFoldersManager$1InitializeFolders.<init>(ExternalFoldersManager.java:84)
+	at ExternalFoldersManager.<init>(ExternalFoldersManager.java:98)
+	at ExternalFoldersManager.getExternalFoldersManager(ExternalFoldersManager.java:107)
+	at JavaModelManager.<init>(JavaModelManager.java:596)
+	at JavaModelManager.<clinit>(JavaModelManager.java:1207)
+	... 39 more
+
+2) [Guice/ErrorInjectingMethod]: NoClassDefFoundError: org/eclipse/jdt/core/IElementChangedListener
+  at XtextResourceSetProvider.setContributions(XtextResourceSetProvider.java:32)
+  at XtextResourceSetProvider.class(XtextResourceSetProvider.java:32)
+  while locating XtextResourceSetProvider
+  at ResourceLoaderProviders$AbstractResourceLoaderProvider.resourceSetProvider(ResourceLoaderProviders.java:29)
+      \_ for field resourceSetProvider
+  at SharedModule.configure(SharedModule.java:176)
+
+Learn more:
+  https://github.com/google/guice/wiki/ERROR_INJECTING_METHOD
+Caused by: NoClassDefFoundError: org/eclipse/jdt/core/IElementChangedListener
+	at CommonTypesContribution.configure(CommonTypesContribution.java:42)
+	at Elements$RecordingBinder.install(Elements.java:426)
+	at SharedStateContributionRegistryImpl$2.configure(SharedStateContributionRegistryImpl.java:157)
+	at Elements$RecordingBinder.install(Elements.java:426)
+	at Elements.getElements(Elements.java:113)
+	at InjectorShell$Builder.build(InjectorShell.java:160)
+	at InternalInjectorCreator.build(InternalInjectorCreator.java:107)
+	at InjectorImpl.createChildInjector(InjectorImpl.java:240)
+	at InjectorImpl.createChildInjector(InjectorImpl.java:245)
+	at SharedStateContributionRegistryImpl.createInjectorWithoutJITBindings(SharedStateContributionRegistryImpl.java:62)
+	at SharedStateContributionRegistryImpl.createContribution(SharedStateContributionRegistryImpl.java:147)
+	at SharedStateContributionRegistryImpl.initializeContributions(SharedStateContributionRegistryImpl.java:129)
+	at SharedStateContributionRegistryImpl.getContributions(SharedStateContributionRegistryImpl.java:69)
+	at SharedStateContributionRegistryImpl.getContributedInstances(SharedStateContributionRegistryImpl.java:77)
+	at XtextResourceSetProvider.setContributions(XtextResourceSetProvider.java:44)
+	at java.base/NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/Method.invoke(Method.java:568)
+	at SingleMethodInjector$2.invoke(SingleMethodInjector.java:72)
+	at SingleMethodInjector.inject(SingleMethodInjector.java:87)
+	at MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:146)
+	at ConstructorInjector.provision(ConstructorInjector.java:124)
+	at ConstructorInjector.construct(ConstructorInjector.java:91)
+	at ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:300)
+	at ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+	at SingletonScope$1.get(SingletonScope.java:169)
+	at InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:45)
+	at FactoryProxy.get(FactoryProxy.java:60)
+	at ExposedKeyFactory.get(ExposedKeyFactory.java:57)
+	at SingleFieldInjector.inject(SingleFieldInjector.java:50)
+	at MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:146)
+	at MembersInjectorImpl.injectAndNotify(MembersInjectorImpl.java:101)
+	at Initializer$InjectableReference.get(Initializer.java:256)
+	at Initializer.injectAll(Initializer.java:153)
+	at InternalInjectorCreator.injectDynamically(InternalInjectorCreator.java:180)
+	at InternalInjectorCreator.build(InternalInjectorCreator.java:113)
+	at Guice.createInjector(Guice.java:87)
+	at Guice.createInjector(Guice.java:69)
+	at Guice.createInjector(Guice.java:59)
+	at internal.Activator.initializeInjector(Activator.java:100)
+	at internal.Activator.start(Activator.java:221)
+	at BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/AccessController.doPrivileged(AccessController.java:569)
+	at BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	at BundleContextImpl.start(BundleContextImpl.java:767)
+	at EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at Module.doStart(Module.java:605)
+	at Module.start(Module.java:468)
+	at SecureAction.start(SecureAction.java:513)
+	at EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	at ClasspathManager.findLocalClass(ClasspathManager.java:570)
+	at ModuleClassLoader.findLocalClass(ModuleClassLoader.java:335)
+	at BundleLoader.findLocalClass(BundleLoader.java:397)
+	at SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at BundleLoader.findClass0(BundleLoader.java:496)
+	at BundleLoader.findClass(BundleLoader.java:416)
+	at ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/ClassLoader.loadClass(ClassLoader.java:525)
+	at ecore.Activator.initializeEcoreInjector(Activator.java:50)
+	at ecore.Activator.start(Activator.java:58)
+	at BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/AccessController.doPrivileged(AccessController.java:569)
+	at BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	at BundleContextImpl.start(BundleContextImpl.java:767)
+	at EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at Module.doStart(Module.java:605)
+	at Module.start(Module.java:468)
+	at ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1852)
+	at EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1845)
+	at ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1788)
+	at ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1750)
+	at ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1672)
+	at ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at EventManager.dispatchEvent(EventManager.java:234)
+	at EventManager$EventThread.run(EventManager.java:345)
+Caused by: ClassNotFoundException: An error occurred while automatically activating bundle org.eclipse.jdt.core (453).
+	... 81 more
+
+3) [Guice/ErrorInjectingMethod]: NoClassDefFoundError: org/eclipse/jdt/core/IElementChangedListener
+  at XtextResourceSetProvider.setContributions(XtextResourceSetProvider.java:32)
+  at XtextResourceSetProvider.class(XtextResourceSetProvider.java:32)
+  while locating XtextResourceSetProvider
+  at ResourceLoaderProviders$AbstractResourceLoaderProvider.resourceSetProvider(ResourceLoaderProviders.java:29)
+      \_ for field resourceSetProvider
+  at SharedModule.configure(SharedModule.java:180)
+
+Learn more:
+  https://github.com/google/guice/wiki/ERROR_INJECTING_METHOD
+Caused by: NoClassDefFoundError (same stack trace as error #2)
+3 errors
+
+======================
+Full classname legend:
+======================
+AccessController:                                       "java.security.AccessController"
+AptPlugin:                                              "org.eclipse.jdt.apt.core.internal.AptPlugin"
+BundleContextImpl:                                      "org.eclipse.osgi.internal.framework.BundleContextImpl"
+BundleContextImpl$2:                                    "org.eclipse.osgi.internal.framework.BundleContextImpl$2"
+BundleException:                                        "org.osgi.framework.BundleException"
+BundleLoader:                                           "org.eclipse.osgi.internal.loader.BundleLoader"
+ClasspathManager:                                       "org.eclipse.osgi.internal.loader.classpath.ClasspathManager"
+CommonTypesContribution:                                "org.eclipse.xtext.common.types.shared.CommonTypesContribution"
+ConstructorBindingImpl$Factory:                         "com.google.inject.internal.ConstructorBindingImpl$Factory"
+ConstructorInjector:                                    "com.google.inject.internal.ConstructorInjector"
+DelegatingMethodAccessorImpl:                           "jdk.internal.reflect.DelegatingMethodAccessorImpl"
+EclipseLazyStarter:                                     "org.eclipse.osgi.internal.hooks.EclipseLazyStarter"
+Elements:                                               "com.google.inject.spi.Elements"
+Elements$RecordingBinder:                               "com.google.inject.spi.Elements$RecordingBinder"
+EquinoxBundle:                                          "org.eclipse.osgi.internal.framework.EquinoxBundle"
+EquinoxBundle$EquinoxModule:                            "org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule"
+EquinoxContainerAdaptor$1$1:                            "org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1"
+EventManager:                                           "org.eclipse.osgi.framework.eventmgr.EventManager"
+EventManager$EventThread:                               "org.eclipse.osgi.framework.eventmgr.EventManager$EventThread"
+ExposedKeyFactory:                                      "com.google.inject.internal.ExposedKeyFactory"
+ExternalFoldersManager:                                 "org.eclipse.jdt.internal.core.ExternalFoldersManager"
+ExternalFoldersManager$1InitializeFolders:              "org.eclipse.jdt.internal.core.ExternalFoldersManager$1InitializeFolders"
+FactoryProxy:                                           "com.google.inject.internal.FactoryProxy"
+Guice:                                                  "com.google.inject.Guice"
+IWorkspace:                                             "org.eclipse.core.resources.IWorkspace"
+Initializer:                                            "com.google.inject.internal.Initializer"
+Initializer$InjectableReference:                        "com.google.inject.internal.Initializer$InjectableReference"
+InjectorImpl:                                           "com.google.inject.internal.InjectorImpl"
+InjectorShell$Builder:                                  "com.google.inject.internal.InjectorShell$Builder"
+InternalFactoryToProviderAdapter:                       "com.google.inject.internal.InternalFactoryToProviderAdapter"
+InternalInjectorCreator:                                "com.google.inject.internal.InternalInjectorCreator"
+JavaCore:                                               "org.eclipse.jdt.core.JavaCore"
+JavaModelManager:                                       "org.eclipse.jdt.internal.core.JavaModelManager"
+MembersInjectorImpl:                                    "com.google.inject.internal.MembersInjectorImpl"
+Method:                                                 "java.lang.reflect.Method"
+Module:                                                 "org.eclipse.osgi.container.Module"
+ModuleClassLoader:                                      "org.eclipse.osgi.internal.loader.ModuleClassLoader"
+ModuleContainer$ContainerStartLevel:                    "org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel"
+ModuleContainer$ContainerStartLevel$2:                  "org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2"
+NativeMethodAccessorImpl:                               "jdk.internal.reflect.NativeMethodAccessorImpl"
+ProviderToInternalFactoryAdapter:                       "com.google.inject.internal.ProviderToInternalFactoryAdapter"
+ResourceLoaderProviders$AbstractResourceLoaderProvider: "org.eclipse.xtext.builder.resourceloader.ResourceLoaderProviders$AbstractResourceLoaderProvider"
+ResourcesPlugin:                                        "org.eclipse.core.resources.ResourcesPlugin"
+SecureAction:                                           "org.eclipse.osgi.framework.util.SecureAction"
+SharedModule:                                           "org.eclipse.xtext.ui.shared.internal.SharedModule"
+SharedStateContributionRegistryImpl:                    "org.eclipse.xtext.ui.shared.internal.SharedStateContributionRegistryImpl"
+SharedStateContributionRegistryImpl$2:                  "org.eclipse.xtext.ui.shared.internal.SharedStateContributionRegistryImpl$2"
+SingleFieldInjector:                                    "com.google.inject.internal.SingleFieldInjector"
+SingleMethodInjector:                                   "com.google.inject.internal.SingleMethodInjector"
+SingleMethodInjector$2:                                 "com.google.inject.internal.SingleMethodInjector$2"
+SingleSourcePackage:                                    "org.eclipse.osgi.internal.loader.sources.SingleSourcePackage"
+SingletonScope$1:                                       "com.google.inject.internal.SingletonScope$1"
+WorkspaceJob:                                           "org.eclipse.core.resources.WorkspaceJob"
+XtextResourceSetProvider:                               "org.eclipse.xtext.ui.resource.XtextResourceSetProvider"
+ecore.Activator:                                        "org.eclipse.xtext.ui.ecore.Activator"
+internal.Activator:                                     "org.eclipse.xtext.ui.shared.internal.Activator"
+========================
+End of classname legend:
+========================
+
+	at com.google.inject.internal.Errors.throwCreationExceptionIfErrorsExist(Errors.java:589)
+	at com.google.inject.internal.InternalInjectorCreator.injectDynamically(InternalInjectorCreator.java:182)
+	at com.google.inject.internal.InternalInjectorCreator.build(InternalInjectorCreator.java:113)
+	at com.google.inject.Guice.createInjector(Guice.java:87)
+	at com.google.inject.Guice.createInjector(Guice.java:69)
+	at com.google.inject.Guice.createInjector(Guice.java:59)
+	at org.eclipse.xtext.ui.shared.internal.Activator.initializeInjector(Activator.java:100)
+	... 40 more
+
+!ENTRY org.eclipse.xtext.xtext.ui.graph 4 0 2025-03-11 19:07:59.186
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Exception in org.eclipse.xtext.xtext.ui.graph.bundle.Activator.start() of bundle org.eclipse.xtext.xtext.ui.graph.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:839)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:767)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:605)
+	at org.eclipse.osgi.container.Module.start(Module.java:468)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1852)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1845)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1788)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1750)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1672)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/ui/shared/SharedStateModule
+	at org.eclipse.xtext.xtext.ui.graph.bundle.Activator.start(Activator.java:38)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	... 14 more
+Caused by: java.lang.ClassNotFoundException: An error occurred while automatically activating bundle org.eclipse.xtext.ui.shared (1081).
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:126)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:570)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:335)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:397)
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass0(BundleLoader.java:496)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:416)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	at org.eclipse.xtext.ui.ecore.Activator.initializeEcoreInjector(Activator.java:50)
+	at org.eclipse.xtext.ui.ecore.Activator.start(Activator.java:58)
+	... 18 more
+Caused by: org.osgi.framework.BundleException: Exception in org.eclipse.xtext.ui.shared.internal.Activator.start() of bundle org.eclipse.xtext.ui.shared.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:839)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:767)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:605)
+	at org.eclipse.osgi.container.Module.start(Module.java:468)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:513)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	... 28 more
+Caused by: org.eclipse.core.runtime.CoreException: Xtext configuration error!
+This error might indicate missing version constraints of installed Xtext based bundles.
+The following bundles were detected that require Xtext UI:
+- org.eclipse.emf.mwe2.language.ui 2.14.0.v20221117-1134 [ACTIVE]
+The installed Xtext bundle versions are:
+- org.eclipse.xtext 2.31.0.v20230529-0659 [ACTIVE]
+- org.eclipse.xtext.ide 2.31.0.v20230529-0659 [ACTIVE]
+- org.eclipse.xtext.ui 2.31.0.v20230529-0659 [ACTIVE]
+- org.eclipse.xtext.ui.shared 2.31.0.v20230529-0659 [STARTING]
+
+	at org.eclipse.xtext.ui.shared.internal.Activator.handleGuiceInitializationError(Activator.java:141)
+	at org.eclipse.xtext.ui.shared.internal.Activator.initializeInjector(Activator.java:108)
+	at org.eclipse.xtext.ui.shared.internal.Activator.start(Activator.java:221)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	... 35 more
+Caused by: com.google.inject.CreationException: Unable to create injector, see the following errors:
+
+1) [Guice/ErrorInjectingMethod]: NoClassDefFoundError: org/eclipse/jdt/core/IElementChangedListener
+  at XtextResourceSetProvider.setContributions(XtextResourceSetProvider.java:32)
+  at XtextResourceSetProvider.class(XtextResourceSetProvider.java:32)
+  while locating XtextResourceSetProvider
+  at ResourceLoaderProviders$AbstractResourceLoaderProvider.resourceSetProvider(ResourceLoaderProviders.java:29)
+      \_ for field resourceSetProvider
+  at SharedModule.configure(SharedModule.java:174)
+
+Learn more:
+  https://github.com/google/guice/wiki/ERROR_INJECTING_METHOD
+Caused by: NoClassDefFoundError: org/eclipse/jdt/core/IElementChangedListener
+	at java.base/ClassLoader.defineClass1(Native Method)
+	at java.base/ClassLoader.defineClass(ClassLoader.java:1017)
+	at ModuleClassLoader.defineClass(ModuleClassLoader.java:283)
+	at ClasspathManager.defineClass(ClasspathManager.java:716)
+	at ClasspathManager.findClassImpl(ClasspathManager.java:639)
+	at ClasspathManager.findLocalClassImpl(ClasspathManager.java:607)
+	at ClasspathManager.findLocalClassImpl(ClasspathManager.java:587)
+	at ClasspathManager.findLocalClass(ClasspathManager.java:566)
+	at ModuleClassLoader.findLocalClass(ModuleClassLoader.java:335)
+	at BundleLoader.findLocalClass(BundleLoader.java:397)
+	at SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at BundleLoader.findClass0(BundleLoader.java:496)
+	at BundleLoader.findClass(BundleLoader.java:416)
+	at ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/ClassLoader.loadClass(ClassLoader.java:525)
+	at CommonTypesContribution.configure(CommonTypesContribution.java:42)
+	at Elements$RecordingBinder.install(Elements.java:426)
+	at SharedStateContributionRegistryImpl$2.configure(SharedStateContributionRegistryImpl.java:157)
+	at Elements$RecordingBinder.install(Elements.java:426)
+	at Elements.getElements(Elements.java:113)
+	at InjectorShell$Builder.build(InjectorShell.java:160)
+	at InternalInjectorCreator.build(InternalInjectorCreator.java:107)
+	at InjectorImpl.createChildInjector(InjectorImpl.java:240)
+	at InjectorImpl.createChildInjector(InjectorImpl.java:245)
+	at SharedStateContributionRegistryImpl.createInjectorWithoutJITBindings(SharedStateContributionRegistryImpl.java:62)
+	at SharedStateContributionRegistryImpl.createContribution(SharedStateContributionRegistryImpl.java:147)
+	at SharedStateContributionRegistryImpl.initializeContributions(SharedStateContributionRegistryImpl.java:129)
+	at SharedStateContributionRegistryImpl.getContributions(SharedStateContributionRegistryImpl.java:69)
+	at SharedStateContributionRegistryImpl.getContributedInstances(SharedStateContributionRegistryImpl.java:77)
+	at XtextResourceSetProvider.setContributions(XtextResourceSetProvider.java:44)
+	at java.base/NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/Method.invoke(Method.java:568)
+	at SingleMethodInjector$2.invoke(SingleMethodInjector.java:72)
+	at SingleMethodInjector.inject(SingleMethodInjector.java:87)
+	at MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:146)
+	at ConstructorInjector.provision(ConstructorInjector.java:124)
+	at ConstructorInjector.construct(ConstructorInjector.java:91)
+	at ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:300)
+	at ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+	at SingletonScope$1.get(SingletonScope.java:169)
+	at InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:45)
+	at FactoryProxy.get(FactoryProxy.java:60)
+	at ExposedKeyFactory.get(ExposedKeyFactory.java:57)
+	at SingleFieldInjector.inject(SingleFieldInjector.java:50)
+	at MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:146)
+	at MembersInjectorImpl.injectAndNotify(MembersInjectorImpl.java:101)
+	at Initializer$InjectableReference.get(Initializer.java:256)
+	at Initializer.injectAll(Initializer.java:153)
+	at InternalInjectorCreator.injectDynamically(InternalInjectorCreator.java:180)
+	at InternalInjectorCreator.build(InternalInjectorCreator.java:113)
+	at Guice.createInjector(Guice.java:87)
+	at Guice.createInjector(Guice.java:69)
+	at Guice.createInjector(Guice.java:59)
+	at internal.Activator.initializeInjector(Activator.java:100)
+	at internal.Activator.start(Activator.java:221)
+	at BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/AccessController.doPrivileged(AccessController.java:569)
+	at BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	at BundleContextImpl.start(BundleContextImpl.java:767)
+	at EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at Module.doStart(Module.java:605)
+	at Module.start(Module.java:468)
+	at SecureAction.start(SecureAction.java:513)
+	at EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	at ClasspathManager.findLocalClass(ClasspathManager.java:570)
+	at ModuleClassLoader.findLocalClass(ModuleClassLoader.java:335)
+	at BundleLoader.findLocalClass(BundleLoader.java:397)
+	at SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at BundleLoader.findClass0(BundleLoader.java:496)
+	at BundleLoader.findClass(BundleLoader.java:416)
+	at ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/ClassLoader.loadClass(ClassLoader.java:525)
+	at ecore.Activator.initializeEcoreInjector(Activator.java:50)
+	at ecore.Activator.start(Activator.java:58)
+	at BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/AccessController.doPrivileged(AccessController.java:569)
+	at BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	at BundleContextImpl.start(BundleContextImpl.java:767)
+	at EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at Module.doStart(Module.java:605)
+	at Module.start(Module.java:468)
+	at ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1852)
+	at EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1845)
+	at ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1788)
+	at ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1750)
+	at ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1672)
+	at ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at EventManager.dispatchEvent(EventManager.java:234)
+	at EventManager$EventThread.run(EventManager.java:345)
+Caused by: ClassNotFoundException: An error occurred while automatically activating bundle org.eclipse.jdt.core (453).
+	at EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:126)
+	at ClasspathManager.findLocalClass(ClasspathManager.java:570)
+	at ModuleClassLoader.findLocalClass(ModuleClassLoader.java:335)
+	at BundleLoader.findLocalClass(BundleLoader.java:397)
+	at SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at BundleLoader.findClass0(BundleLoader.java:496)
+	at BundleLoader.findClass(BundleLoader.java:416)
+	at ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/ClassLoader.loadClass(ClassLoader.java:525)
+	at AptPlugin.start(AptPlugin.java:111)
+	... 18 more
+Caused by: BundleException: Exception in JavaCore.start() of bundle org.eclipse.jdt.core.
+	at BundleContextImpl.startActivator(BundleContextImpl.java:839)
+	at BundleContextImpl.start(BundleContextImpl.java:767)
+	at EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at Module.doStart(Module.java:605)
+	at Module.start(Module.java:468)
+	at SecureAction.start(SecureAction.java:513)
+	at EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	... 27 more
+Caused by: ExceptionInInitializerError
+	at JavaCore.start(JavaCore.java:6477)
+	at BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/AccessController.doPrivileged(AccessController.java:569)
+	at BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	... 34 more
+Caused by: IllegalStateException: Workspace is already closed or not ready yet. Consider tracking the IWorkspace service (using your favorite technique, e.g. Declarative Services, ServiceTracker, Blueprint, ...) instead of calling the static method here to prevent such issues!
+	at ResourcesPlugin.getWorkspace(ResourcesPlugin.java:502)
+	at WorkspaceJob.<init>(WorkspaceJob.java:68)
+	at ExternalFoldersManager$1InitializeFolders.<init>(ExternalFoldersManager.java:84)
+	at ExternalFoldersManager.<init>(ExternalFoldersManager.java:98)
+	at ExternalFoldersManager.getExternalFoldersManager(ExternalFoldersManager.java:107)
+	at JavaModelManager.<init>(JavaModelManager.java:596)
+	at JavaModelManager.<clinit>(JavaModelManager.java:1207)
+	... 39 more
+
+2) [Guice/ErrorInjectingMethod]: NoClassDefFoundError: org/eclipse/jdt/core/IElementChangedListener
+  at XtextResourceSetProvider.setContributions(XtextResourceSetProvider.java:32)
+  at XtextResourceSetProvider.class(XtextResourceSetProvider.java:32)
+  while locating XtextResourceSetProvider
+  at ResourceLoaderProviders$AbstractResourceLoaderProvider.resourceSetProvider(ResourceLoaderProviders.java:29)
+      \_ for field resourceSetProvider
+  at SharedModule.configure(SharedModule.java:176)
+
+Learn more:
+  https://github.com/google/guice/wiki/ERROR_INJECTING_METHOD
+Caused by: NoClassDefFoundError: org/eclipse/jdt/core/IElementChangedListener
+	at CommonTypesContribution.configure(CommonTypesContribution.java:42)
+	at Elements$RecordingBinder.install(Elements.java:426)
+	at SharedStateContributionRegistryImpl$2.configure(SharedStateContributionRegistryImpl.java:157)
+	at Elements$RecordingBinder.install(Elements.java:426)
+	at Elements.getElements(Elements.java:113)
+	at InjectorShell$Builder.build(InjectorShell.java:160)
+	at InternalInjectorCreator.build(InternalInjectorCreator.java:107)
+	at InjectorImpl.createChildInjector(InjectorImpl.java:240)
+	at InjectorImpl.createChildInjector(InjectorImpl.java:245)
+	at SharedStateContributionRegistryImpl.createInjectorWithoutJITBindings(SharedStateContributionRegistryImpl.java:62)
+	at SharedStateContributionRegistryImpl.createContribution(SharedStateContributionRegistryImpl.java:147)
+	at SharedStateContributionRegistryImpl.initializeContributions(SharedStateContributionRegistryImpl.java:129)
+	at SharedStateContributionRegistryImpl.getContributions(SharedStateContributionRegistryImpl.java:69)
+	at SharedStateContributionRegistryImpl.getContributedInstances(SharedStateContributionRegistryImpl.java:77)
+	at XtextResourceSetProvider.setContributions(XtextResourceSetProvider.java:44)
+	at java.base/NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/Method.invoke(Method.java:568)
+	at SingleMethodInjector$2.invoke(SingleMethodInjector.java:72)
+	at SingleMethodInjector.inject(SingleMethodInjector.java:87)
+	at MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:146)
+	at ConstructorInjector.provision(ConstructorInjector.java:124)
+	at ConstructorInjector.construct(ConstructorInjector.java:91)
+	at ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:300)
+	at ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+	at SingletonScope$1.get(SingletonScope.java:169)
+	at InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:45)
+	at FactoryProxy.get(FactoryProxy.java:60)
+	at ExposedKeyFactory.get(ExposedKeyFactory.java:57)
+	at SingleFieldInjector.inject(SingleFieldInjector.java:50)
+	at MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:146)
+	at MembersInjectorImpl.injectAndNotify(MembersInjectorImpl.java:101)
+	at Initializer$InjectableReference.get(Initializer.java:256)
+	at Initializer.injectAll(Initializer.java:153)
+	at InternalInjectorCreator.injectDynamically(InternalInjectorCreator.java:180)
+	at InternalInjectorCreator.build(InternalInjectorCreator.java:113)
+	at Guice.createInjector(Guice.java:87)
+	at Guice.createInjector(Guice.java:69)
+	at Guice.createInjector(Guice.java:59)
+	at internal.Activator.initializeInjector(Activator.java:100)
+	at internal.Activator.start(Activator.java:221)
+	at BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/AccessController.doPrivileged(AccessController.java:569)
+	at BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	at BundleContextImpl.start(BundleContextImpl.java:767)
+	at EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at Module.doStart(Module.java:605)
+	at Module.start(Module.java:468)
+	at SecureAction.start(SecureAction.java:513)
+	at EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	at ClasspathManager.findLocalClass(ClasspathManager.java:570)
+	at ModuleClassLoader.findLocalClass(ModuleClassLoader.java:335)
+	at BundleLoader.findLocalClass(BundleLoader.java:397)
+	at SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at BundleLoader.findClass0(BundleLoader.java:496)
+	at BundleLoader.findClass(BundleLoader.java:416)
+	at ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/ClassLoader.loadClass(ClassLoader.java:525)
+	at ecore.Activator.initializeEcoreInjector(Activator.java:50)
+	at ecore.Activator.start(Activator.java:58)
+	at BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/AccessController.doPrivileged(AccessController.java:569)
+	at BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	at BundleContextImpl.start(BundleContextImpl.java:767)
+	at EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at Module.doStart(Module.java:605)
+	at Module.start(Module.java:468)
+	at ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1852)
+	at EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1845)
+	at ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1788)
+	at ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1750)
+	at ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1672)
+	at ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at EventManager.dispatchEvent(EventManager.java:234)
+	at EventManager$EventThread.run(EventManager.java:345)
+Caused by: ClassNotFoundException: An error occurred while automatically activating bundle org.eclipse.jdt.core (453).
+	... 81 more
+
+3) [Guice/ErrorInjectingMethod]: NoClassDefFoundError: org/eclipse/jdt/core/IElementChangedListener
+  at XtextResourceSetProvider.setContributions(XtextResourceSetProvider.java:32)
+  at XtextResourceSetProvider.class(XtextResourceSetProvider.java:32)
+  while locating XtextResourceSetProvider
+  at ResourceLoaderProviders$AbstractResourceLoaderProvider.resourceSetProvider(ResourceLoaderProviders.java:29)
+      \_ for field resourceSetProvider
+  at SharedModule.configure(SharedModule.java:180)
+
+Learn more:
+  https://github.com/google/guice/wiki/ERROR_INJECTING_METHOD
+Caused by: NoClassDefFoundError (same stack trace as error #2)
+3 errors
+
+======================
+Full classname legend:
+======================
+AccessController:                                       "java.security.AccessController"
+AptPlugin:                                              "org.eclipse.jdt.apt.core.internal.AptPlugin"
+BundleContextImpl:                                      "org.eclipse.osgi.internal.framework.BundleContextImpl"
+BundleContextImpl$2:                                    "org.eclipse.osgi.internal.framework.BundleContextImpl$2"
+BundleException:                                        "org.osgi.framework.BundleException"
+BundleLoader:                                           "org.eclipse.osgi.internal.loader.BundleLoader"
+ClasspathManager:                                       "org.eclipse.osgi.internal.loader.classpath.ClasspathManager"
+CommonTypesContribution:                                "org.eclipse.xtext.common.types.shared.CommonTypesContribution"
+ConstructorBindingImpl$Factory:                         "com.google.inject.internal.ConstructorBindingImpl$Factory"
+ConstructorInjector:                                    "com.google.inject.internal.ConstructorInjector"
+DelegatingMethodAccessorImpl:                           "jdk.internal.reflect.DelegatingMethodAccessorImpl"
+EclipseLazyStarter:                                     "org.eclipse.osgi.internal.hooks.EclipseLazyStarter"
+Elements:                                               "com.google.inject.spi.Elements"
+Elements$RecordingBinder:                               "com.google.inject.spi.Elements$RecordingBinder"
+EquinoxBundle:                                          "org.eclipse.osgi.internal.framework.EquinoxBundle"
+EquinoxBundle$EquinoxModule:                            "org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule"
+EquinoxContainerAdaptor$1$1:                            "org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1"
+EventManager:                                           "org.eclipse.osgi.framework.eventmgr.EventManager"
+EventManager$EventThread:                               "org.eclipse.osgi.framework.eventmgr.EventManager$EventThread"
+ExposedKeyFactory:                                      "com.google.inject.internal.ExposedKeyFactory"
+ExternalFoldersManager:                                 "org.eclipse.jdt.internal.core.ExternalFoldersManager"
+ExternalFoldersManager$1InitializeFolders:              "org.eclipse.jdt.internal.core.ExternalFoldersManager$1InitializeFolders"
+FactoryProxy:                                           "com.google.inject.internal.FactoryProxy"
+Guice:                                                  "com.google.inject.Guice"
+IWorkspace:                                             "org.eclipse.core.resources.IWorkspace"
+Initializer:                                            "com.google.inject.internal.Initializer"
+Initializer$InjectableReference:                        "com.google.inject.internal.Initializer$InjectableReference"
+InjectorImpl:                                           "com.google.inject.internal.InjectorImpl"
+InjectorShell$Builder:                                  "com.google.inject.internal.InjectorShell$Builder"
+InternalFactoryToProviderAdapter:                       "com.google.inject.internal.InternalFactoryToProviderAdapter"
+InternalInjectorCreator:                                "com.google.inject.internal.InternalInjectorCreator"
+JavaCore:                                               "org.eclipse.jdt.core.JavaCore"
+JavaModelManager:                                       "org.eclipse.jdt.internal.core.JavaModelManager"
+MembersInjectorImpl:                                    "com.google.inject.internal.MembersInjectorImpl"
+Method:                                                 "java.lang.reflect.Method"
+Module:                                                 "org.eclipse.osgi.container.Module"
+ModuleClassLoader:                                      "org.eclipse.osgi.internal.loader.ModuleClassLoader"
+ModuleContainer$ContainerStartLevel:                    "org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel"
+ModuleContainer$ContainerStartLevel$2:                  "org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2"
+NativeMethodAccessorImpl:                               "jdk.internal.reflect.NativeMethodAccessorImpl"
+ProviderToInternalFactoryAdapter:                       "com.google.inject.internal.ProviderToInternalFactoryAdapter"
+ResourceLoaderProviders$AbstractResourceLoaderProvider: "org.eclipse.xtext.builder.resourceloader.ResourceLoaderProviders$AbstractResourceLoaderProvider"
+ResourcesPlugin:                                        "org.eclipse.core.resources.ResourcesPlugin"
+SecureAction:                                           "org.eclipse.osgi.framework.util.SecureAction"
+SharedModule:                                           "org.eclipse.xtext.ui.shared.internal.SharedModule"
+SharedStateContributionRegistryImpl:                    "org.eclipse.xtext.ui.shared.internal.SharedStateContributionRegistryImpl"
+SharedStateContributionRegistryImpl$2:                  "org.eclipse.xtext.ui.shared.internal.SharedStateContributionRegistryImpl$2"
+SingleFieldInjector:                                    "com.google.inject.internal.SingleFieldInjector"
+SingleMethodInjector:                                   "com.google.inject.internal.SingleMethodInjector"
+SingleMethodInjector$2:                                 "com.google.inject.internal.SingleMethodInjector$2"
+SingleSourcePackage:                                    "org.eclipse.osgi.internal.loader.sources.SingleSourcePackage"
+SingletonScope$1:                                       "com.google.inject.internal.SingletonScope$1"
+WorkspaceJob:                                           "org.eclipse.core.resources.WorkspaceJob"
+XtextResourceSetProvider:                               "org.eclipse.xtext.ui.resource.XtextResourceSetProvider"
+ecore.Activator:                                        "org.eclipse.xtext.ui.ecore.Activator"
+internal.Activator:                                     "org.eclipse.xtext.ui.shared.internal.Activator"
+========================
+End of classname legend:
+========================
+
+	at com.google.inject.internal.Errors.throwCreationExceptionIfErrorsExist(Errors.java:589)
+	at com.google.inject.internal.InternalInjectorCreator.injectDynamically(InternalInjectorCreator.java:182)
+	at com.google.inject.internal.InternalInjectorCreator.build(InternalInjectorCreator.java:113)
+	at com.google.inject.Guice.createInjector(Guice.java:87)
+	at com.google.inject.Guice.createInjector(Guice.java:69)
+	at com.google.inject.Guice.createInjector(Guice.java:59)
+	at org.eclipse.xtext.ui.shared.internal.Activator.initializeInjector(Activator.java:100)
+	... 40 more
+Root exception:
+java.lang.NoClassDefFoundError: org/eclipse/xtext/ui/shared/SharedStateModule
+	at org.eclipse.xtext.xtext.ui.graph.bundle.Activator.start(Activator.java:38)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:767)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:605)
+	at org.eclipse.osgi.container.Module.start(Module.java:468)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1852)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1845)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1788)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1750)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1672)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+Caused by: java.lang.ClassNotFoundException: An error occurred while automatically activating bundle org.eclipse.xtext.ui.shared (1081).
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:126)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:570)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:335)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:397)
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass0(BundleLoader.java:496)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:416)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	at org.eclipse.xtext.ui.ecore.Activator.initializeEcoreInjector(Activator.java:50)
+	at org.eclipse.xtext.ui.ecore.Activator.start(Activator.java:58)
+	... 18 more
+Caused by: org.osgi.framework.BundleException: Exception in org.eclipse.xtext.ui.shared.internal.Activator.start() of bundle org.eclipse.xtext.ui.shared.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:839)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:767)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:605)
+	at org.eclipse.osgi.container.Module.start(Module.java:468)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:513)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	... 28 more
+Caused by: org.eclipse.core.runtime.CoreException: Xtext configuration error!
+This error might indicate missing version constraints of installed Xtext based bundles.
+The following bundles were detected that require Xtext UI:
+- org.eclipse.emf.mwe2.language.ui 2.14.0.v20221117-1134 [ACTIVE]
+The installed Xtext bundle versions are:
+- org.eclipse.xtext 2.31.0.v20230529-0659 [ACTIVE]
+- org.eclipse.xtext.ide 2.31.0.v20230529-0659 [ACTIVE]
+- org.eclipse.xtext.ui 2.31.0.v20230529-0659 [ACTIVE]
+- org.eclipse.xtext.ui.shared 2.31.0.v20230529-0659 [STARTING]
+
+	at org.eclipse.xtext.ui.shared.internal.Activator.handleGuiceInitializationError(Activator.java:141)
+	at org.eclipse.xtext.ui.shared.internal.Activator.initializeInjector(Activator.java:108)
+	at org.eclipse.xtext.ui.shared.internal.Activator.start(Activator.java:221)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	... 35 more
+Caused by: com.google.inject.CreationException: Unable to create injector, see the following errors:
+
+1) [Guice/ErrorInjectingMethod]: NoClassDefFoundError: org/eclipse/jdt/core/IElementChangedListener
+  at XtextResourceSetProvider.setContributions(XtextResourceSetProvider.java:32)
+  at XtextResourceSetProvider.class(XtextResourceSetProvider.java:32)
+  while locating XtextResourceSetProvider
+  at ResourceLoaderProviders$AbstractResourceLoaderProvider.resourceSetProvider(ResourceLoaderProviders.java:29)
+      \_ for field resourceSetProvider
+  at SharedModule.configure(SharedModule.java:174)
+
+Learn more:
+  https://github.com/google/guice/wiki/ERROR_INJECTING_METHOD
+Caused by: NoClassDefFoundError: org/eclipse/jdt/core/IElementChangedListener
+	at java.base/ClassLoader.defineClass1(Native Method)
+	at java.base/ClassLoader.defineClass(ClassLoader.java:1017)
+	at ModuleClassLoader.defineClass(ModuleClassLoader.java:283)
+	at ClasspathManager.defineClass(ClasspathManager.java:716)
+	at ClasspathManager.findClassImpl(ClasspathManager.java:639)
+	at ClasspathManager.findLocalClassImpl(ClasspathManager.java:607)
+	at ClasspathManager.findLocalClassImpl(ClasspathManager.java:587)
+	at ClasspathManager.findLocalClass(ClasspathManager.java:566)
+	at ModuleClassLoader.findLocalClass(ModuleClassLoader.java:335)
+	at BundleLoader.findLocalClass(BundleLoader.java:397)
+	at SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at BundleLoader.findClass0(BundleLoader.java:496)
+	at BundleLoader.findClass(BundleLoader.java:416)
+	at ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/ClassLoader.loadClass(ClassLoader.java:525)
+	at CommonTypesContribution.configure(CommonTypesContribution.java:42)
+	at Elements$RecordingBinder.install(Elements.java:426)
+	at SharedStateContributionRegistryImpl$2.configure(SharedStateContributionRegistryImpl.java:157)
+	at Elements$RecordingBinder.install(Elements.java:426)
+	at Elements.getElements(Elements.java:113)
+	at InjectorShell$Builder.build(InjectorShell.java:160)
+	at InternalInjectorCreator.build(InternalInjectorCreator.java:107)
+	at InjectorImpl.createChildInjector(InjectorImpl.java:240)
+	at InjectorImpl.createChildInjector(InjectorImpl.java:245)
+	at SharedStateContributionRegistryImpl.createInjectorWithoutJITBindings(SharedStateContributionRegistryImpl.java:62)
+	at SharedStateContributionRegistryImpl.createContribution(SharedStateContributionRegistryImpl.java:147)
+	at SharedStateContributionRegistryImpl.initializeContributions(SharedStateContributionRegistryImpl.java:129)
+	at SharedStateContributionRegistryImpl.getContributions(SharedStateContributionRegistryImpl.java:69)
+	at SharedStateContributionRegistryImpl.getContributedInstances(SharedStateContributionRegistryImpl.java:77)
+	at XtextResourceSetProvider.setContributions(XtextResourceSetProvider.java:44)
+	at java.base/NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/Method.invoke(Method.java:568)
+	at SingleMethodInjector$2.invoke(SingleMethodInjector.java:72)
+	at SingleMethodInjector.inject(SingleMethodInjector.java:87)
+	at MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:146)
+	at ConstructorInjector.provision(ConstructorInjector.java:124)
+	at ConstructorInjector.construct(ConstructorInjector.java:91)
+	at ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:300)
+	at ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+	at SingletonScope$1.get(SingletonScope.java:169)
+	at InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:45)
+	at FactoryProxy.get(FactoryProxy.java:60)
+	at ExposedKeyFactory.get(ExposedKeyFactory.java:57)
+	at SingleFieldInjector.inject(SingleFieldInjector.java:50)
+	at MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:146)
+	at MembersInjectorImpl.injectAndNotify(MembersInjectorImpl.java:101)
+	at Initializer$InjectableReference.get(Initializer.java:256)
+	at Initializer.injectAll(Initializer.java:153)
+	at InternalInjectorCreator.injectDynamically(InternalInjectorCreator.java:180)
+	at InternalInjectorCreator.build(InternalInjectorCreator.java:113)
+	at Guice.createInjector(Guice.java:87)
+	at Guice.createInjector(Guice.java:69)
+	at Guice.createInjector(Guice.java:59)
+	at internal.Activator.initializeInjector(Activator.java:100)
+	at internal.Activator.start(Activator.java:221)
+	at BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/AccessController.doPrivileged(AccessController.java:569)
+	at BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	at BundleContextImpl.start(BundleContextImpl.java:767)
+	at EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at Module.doStart(Module.java:605)
+	at Module.start(Module.java:468)
+	at SecureAction.start(SecureAction.java:513)
+	at EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	at ClasspathManager.findLocalClass(ClasspathManager.java:570)
+	at ModuleClassLoader.findLocalClass(ModuleClassLoader.java:335)
+	at BundleLoader.findLocalClass(BundleLoader.java:397)
+	at SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at BundleLoader.findClass0(BundleLoader.java:496)
+	at BundleLoader.findClass(BundleLoader.java:416)
+	at ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/ClassLoader.loadClass(ClassLoader.java:525)
+	at ecore.Activator.initializeEcoreInjector(Activator.java:50)
+	at ecore.Activator.start(Activator.java:58)
+	at BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/AccessController.doPrivileged(AccessController.java:569)
+	at BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	at BundleContextImpl.start(BundleContextImpl.java:767)
+	at EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at Module.doStart(Module.java:605)
+	at Module.start(Module.java:468)
+	at ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1852)
+	at EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1845)
+	at ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1788)
+	at ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1750)
+	at ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1672)
+	at ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at EventManager.dispatchEvent(EventManager.java:234)
+	at EventManager$EventThread.run(EventManager.java:345)
+Caused by: ClassNotFoundException: An error occurred while automatically activating bundle org.eclipse.jdt.core (453).
+	at EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:126)
+	at ClasspathManager.findLocalClass(ClasspathManager.java:570)
+	at ModuleClassLoader.findLocalClass(ModuleClassLoader.java:335)
+	at BundleLoader.findLocalClass(BundleLoader.java:397)
+	at SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at BundleLoader.findClass0(BundleLoader.java:496)
+	at BundleLoader.findClass(BundleLoader.java:416)
+	at ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/ClassLoader.loadClass(ClassLoader.java:525)
+	at AptPlugin.start(AptPlugin.java:111)
+	... 18 more
+Caused by: BundleException: Exception in JavaCore.start() of bundle org.eclipse.jdt.core.
+	at BundleContextImpl.startActivator(BundleContextImpl.java:839)
+	at BundleContextImpl.start(BundleContextImpl.java:767)
+	at EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at Module.doStart(Module.java:605)
+	at Module.start(Module.java:468)
+	at SecureAction.start(SecureAction.java:513)
+	at EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	... 27 more
+Caused by: ExceptionInInitializerError
+	at JavaCore.start(JavaCore.java:6477)
+	at BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/AccessController.doPrivileged(AccessController.java:569)
+	at BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	... 34 more
+Caused by: IllegalStateException: Workspace is already closed or not ready yet. Consider tracking the IWorkspace service (using your favorite technique, e.g. Declarative Services, ServiceTracker, Blueprint, ...) instead of calling the static method here to prevent such issues!
+	at ResourcesPlugin.getWorkspace(ResourcesPlugin.java:502)
+	at WorkspaceJob.<init>(WorkspaceJob.java:68)
+	at ExternalFoldersManager$1InitializeFolders.<init>(ExternalFoldersManager.java:84)
+	at ExternalFoldersManager.<init>(ExternalFoldersManager.java:98)
+	at ExternalFoldersManager.getExternalFoldersManager(ExternalFoldersManager.java:107)
+	at JavaModelManager.<init>(JavaModelManager.java:596)
+	at JavaModelManager.<clinit>(JavaModelManager.java:1207)
+	... 39 more
+
+2) [Guice/ErrorInjectingMethod]: NoClassDefFoundError: org/eclipse/jdt/core/IElementChangedListener
+  at XtextResourceSetProvider.setContributions(XtextResourceSetProvider.java:32)
+  at XtextResourceSetProvider.class(XtextResourceSetProvider.java:32)
+  while locating XtextResourceSetProvider
+  at ResourceLoaderProviders$AbstractResourceLoaderProvider.resourceSetProvider(ResourceLoaderProviders.java:29)
+      \_ for field resourceSetProvider
+  at SharedModule.configure(SharedModule.java:176)
+
+Learn more:
+  https://github.com/google/guice/wiki/ERROR_INJECTING_METHOD
+Caused by: NoClassDefFoundError: org/eclipse/jdt/core/IElementChangedListener
+	at CommonTypesContribution.configure(CommonTypesContribution.java:42)
+	at Elements$RecordingBinder.install(Elements.java:426)
+	at SharedStateContributionRegistryImpl$2.configure(SharedStateContributionRegistryImpl.java:157)
+	at Elements$RecordingBinder.install(Elements.java:426)
+	at Elements.getElements(Elements.java:113)
+	at InjectorShell$Builder.build(InjectorShell.java:160)
+	at InternalInjectorCreator.build(InternalInjectorCreator.java:107)
+	at InjectorImpl.createChildInjector(InjectorImpl.java:240)
+	at InjectorImpl.createChildInjector(InjectorImpl.java:245)
+	at SharedStateContributionRegistryImpl.createInjectorWithoutJITBindings(SharedStateContributionRegistryImpl.java:62)
+	at SharedStateContributionRegistryImpl.createContribution(SharedStateContributionRegistryImpl.java:147)
+	at SharedStateContributionRegistryImpl.initializeContributions(SharedStateContributionRegistryImpl.java:129)
+	at SharedStateContributionRegistryImpl.getContributions(SharedStateContributionRegistryImpl.java:69)
+	at SharedStateContributionRegistryImpl.getContributedInstances(SharedStateContributionRegistryImpl.java:77)
+	at XtextResourceSetProvider.setContributions(XtextResourceSetProvider.java:44)
+	at java.base/NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/Method.invoke(Method.java:568)
+	at SingleMethodInjector$2.invoke(SingleMethodInjector.java:72)
+	at SingleMethodInjector.inject(SingleMethodInjector.java:87)
+	at MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:146)
+	at ConstructorInjector.provision(ConstructorInjector.java:124)
+	at ConstructorInjector.construct(ConstructorInjector.java:91)
+	at ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:300)
+	at ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+	at SingletonScope$1.get(SingletonScope.java:169)
+	at InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:45)
+	at FactoryProxy.get(FactoryProxy.java:60)
+	at ExposedKeyFactory.get(ExposedKeyFactory.java:57)
+	at SingleFieldInjector.inject(SingleFieldInjector.java:50)
+	at MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:146)
+	at MembersInjectorImpl.injectAndNotify(MembersInjectorImpl.java:101)
+	at Initializer$InjectableReference.get(Initializer.java:256)
+	at Initializer.injectAll(Initializer.java:153)
+	at InternalInjectorCreator.injectDynamically(InternalInjectorCreator.java:180)
+	at InternalInjectorCreator.build(InternalInjectorCreator.java:113)
+	at Guice.createInjector(Guice.java:87)
+	at Guice.createInjector(Guice.java:69)
+	at Guice.createInjector(Guice.java:59)
+	at internal.Activator.initializeInjector(Activator.java:100)
+	at internal.Activator.start(Activator.java:221)
+	at BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/AccessController.doPrivileged(AccessController.java:569)
+	at BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	at BundleContextImpl.start(BundleContextImpl.java:767)
+	at EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at Module.doStart(Module.java:605)
+	at Module.start(Module.java:468)
+	at SecureAction.start(SecureAction.java:513)
+	at EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	at ClasspathManager.findLocalClass(ClasspathManager.java:570)
+	at ModuleClassLoader.findLocalClass(ModuleClassLoader.java:335)
+	at BundleLoader.findLocalClass(BundleLoader.java:397)
+	at SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at BundleLoader.findClass0(BundleLoader.java:496)
+	at BundleLoader.findClass(BundleLoader.java:416)
+	at ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/ClassLoader.loadClass(ClassLoader.java:525)
+	at ecore.Activator.initializeEcoreInjector(Activator.java:50)
+	at ecore.Activator.start(Activator.java:58)
+	at BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/AccessController.doPrivileged(AccessController.java:569)
+	at BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	at BundleContextImpl.start(BundleContextImpl.java:767)
+	at EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at Module.doStart(Module.java:605)
+	at Module.start(Module.java:468)
+	at ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1852)
+	at EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1845)
+	at ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1788)
+	at ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1750)
+	at ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1672)
+	at ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at EventManager.dispatchEvent(EventManager.java:234)
+	at EventManager$EventThread.run(EventManager.java:345)
+Caused by: ClassNotFoundException: An error occurred while automatically activating bundle org.eclipse.jdt.core (453).
+	... 81 more
+
+3) [Guice/ErrorInjectingMethod]: NoClassDefFoundError: org/eclipse/jdt/core/IElementChangedListener
+  at XtextResourceSetProvider.setContributions(XtextResourceSetProvider.java:32)
+  at XtextResourceSetProvider.class(XtextResourceSetProvider.java:32)
+  while locating XtextResourceSetProvider
+  at ResourceLoaderProviders$AbstractResourceLoaderProvider.resourceSetProvider(ResourceLoaderProviders.java:29)
+      \_ for field resourceSetProvider
+  at SharedModule.configure(SharedModule.java:180)
+
+Learn more:
+  https://github.com/google/guice/wiki/ERROR_INJECTING_METHOD
+Caused by: NoClassDefFoundError (same stack trace as error #2)
+3 errors
+
+======================
+Full classname legend:
+======================
+AccessController:                                       "java.security.AccessController"
+AptPlugin:                                              "org.eclipse.jdt.apt.core.internal.AptPlugin"
+BundleContextImpl:                                      "org.eclipse.osgi.internal.framework.BundleContextImpl"
+BundleContextImpl$2:                                    "org.eclipse.osgi.internal.framework.BundleContextImpl$2"
+BundleException:                                        "org.osgi.framework.BundleException"
+BundleLoader:                                           "org.eclipse.osgi.internal.loader.BundleLoader"
+ClasspathManager:                                       "org.eclipse.osgi.internal.loader.classpath.ClasspathManager"
+CommonTypesContribution:                                "org.eclipse.xtext.common.types.shared.CommonTypesContribution"
+ConstructorBindingImpl$Factory:                         "com.google.inject.internal.ConstructorBindingImpl$Factory"
+ConstructorInjector:                                    "com.google.inject.internal.ConstructorInjector"
+DelegatingMethodAccessorImpl:                           "jdk.internal.reflect.DelegatingMethodAccessorImpl"
+EclipseLazyStarter:                                     "org.eclipse.osgi.internal.hooks.EclipseLazyStarter"
+Elements:                                               "com.google.inject.spi.Elements"
+Elements$RecordingBinder:                               "com.google.inject.spi.Elements$RecordingBinder"
+EquinoxBundle:                                          "org.eclipse.osgi.internal.framework.EquinoxBundle"
+EquinoxBundle$EquinoxModule:                            "org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule"
+EquinoxContainerAdaptor$1$1:                            "org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1"
+EventManager:                                           "org.eclipse.osgi.framework.eventmgr.EventManager"
+EventManager$EventThread:                               "org.eclipse.osgi.framework.eventmgr.EventManager$EventThread"
+ExposedKeyFactory:                                      "com.google.inject.internal.ExposedKeyFactory"
+ExternalFoldersManager:                                 "org.eclipse.jdt.internal.core.ExternalFoldersManager"
+ExternalFoldersManager$1InitializeFolders:              "org.eclipse.jdt.internal.core.ExternalFoldersManager$1InitializeFolders"
+FactoryProxy:                                           "com.google.inject.internal.FactoryProxy"
+Guice:                                                  "com.google.inject.Guice"
+IWorkspace:                                             "org.eclipse.core.resources.IWorkspace"
+Initializer:                                            "com.google.inject.internal.Initializer"
+Initializer$InjectableReference:                        "com.google.inject.internal.Initializer$InjectableReference"
+InjectorImpl:                                           "com.google.inject.internal.InjectorImpl"
+InjectorShell$Builder:                                  "com.google.inject.internal.InjectorShell$Builder"
+InternalFactoryToProviderAdapter:                       "com.google.inject.internal.InternalFactoryToProviderAdapter"
+InternalInjectorCreator:                                "com.google.inject.internal.InternalInjectorCreator"
+JavaCore:                                               "org.eclipse.jdt.core.JavaCore"
+JavaModelManager:                                       "org.eclipse.jdt.internal.core.JavaModelManager"
+MembersInjectorImpl:                                    "com.google.inject.internal.MembersInjectorImpl"
+Method:                                                 "java.lang.reflect.Method"
+Module:                                                 "org.eclipse.osgi.container.Module"
+ModuleClassLoader:                                      "org.eclipse.osgi.internal.loader.ModuleClassLoader"
+ModuleContainer$ContainerStartLevel:                    "org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel"
+ModuleContainer$ContainerStartLevel$2:                  "org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2"
+NativeMethodAccessorImpl:                               "jdk.internal.reflect.NativeMethodAccessorImpl"
+ProviderToInternalFactoryAdapter:                       "com.google.inject.internal.ProviderToInternalFactoryAdapter"
+ResourceLoaderProviders$AbstractResourceLoaderProvider: "org.eclipse.xtext.builder.resourceloader.ResourceLoaderProviders$AbstractResourceLoaderProvider"
+ResourcesPlugin:                                        "org.eclipse.core.resources.ResourcesPlugin"
+SecureAction:                                           "org.eclipse.osgi.framework.util.SecureAction"
+SharedModule:                                           "org.eclipse.xtext.ui.shared.internal.SharedModule"
+SharedStateContributionRegistryImpl:                    "org.eclipse.xtext.ui.shared.internal.SharedStateContributionRegistryImpl"
+SharedStateContributionRegistryImpl$2:                  "org.eclipse.xtext.ui.shared.internal.SharedStateContributionRegistryImpl$2"
+SingleFieldInjector:                                    "com.google.inject.internal.SingleFieldInjector"
+SingleMethodInjector:                                   "com.google.inject.internal.SingleMethodInjector"
+SingleMethodInjector$2:                                 "com.google.inject.internal.SingleMethodInjector$2"
+SingleSourcePackage:                                    "org.eclipse.osgi.internal.loader.sources.SingleSourcePackage"
+SingletonScope$1:                                       "com.google.inject.internal.SingletonScope$1"
+WorkspaceJob:                                           "org.eclipse.core.resources.WorkspaceJob"
+XtextResourceSetProvider:                               "org.eclipse.xtext.ui.resource.XtextResourceSetProvider"
+ecore.Activator:                                        "org.eclipse.xtext.ui.ecore.Activator"
+internal.Activator:                                     "org.eclipse.xtext.ui.shared.internal.Activator"
+========================
+End of classname legend:
+========================
+
+	at com.google.inject.internal.Errors.throwCreationExceptionIfErrorsExist(Errors.java:589)
+	at com.google.inject.internal.InternalInjectorCreator.injectDynamically(InternalInjectorCreator.java:182)
+	at com.google.inject.internal.InternalInjectorCreator.build(InternalInjectorCreator.java:113)
+	at com.google.inject.Guice.createInjector(Guice.java:87)
+	at com.google.inject.Guice.createInjector(Guice.java:69)
+	at com.google.inject.Guice.createInjector(Guice.java:59)
+	at org.eclipse.xtext.ui.shared.internal.Activator.initializeInjector(Activator.java:100)
+	... 40 more
